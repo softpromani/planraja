@@ -19,11 +19,14 @@ return new class extends Migration
             $table->text('short_desc')->nullable();
             $table->text('description')->nullable();
             $table->string('duration')->nullable();
+            $table->string('days')->nullable();
+            $table->unsignedBigInteger('tour_category_id');
             $table->enum('trip_type', ['0', '1'])->default('0')->comment('0=>Road Trip, 1=>Beach Relaxation');
             $table->foreignId('start_city')->nullable()->constrained('cities');
             $table->foreignId('end_city')->nullable()->constrained('cities');
             $table->enum('status', ['0', '1'])->default('1')->comment('0=>Inactive, 1=>Active');
             $table->timestamps();
+
         });
     }
 

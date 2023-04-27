@@ -50,72 +50,74 @@
                             @endif
                         </div>
                         <!-- Default Table -->
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Package Name </th>
-                                    <th scope="col">Duration</th>
-                                    <th scope="col">Tour Category</th>
-                                    <th scope="col">Start City</th>
-                                    <th scope="col">End City</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Created At</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                        <div class="table-responsive">
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Package Name </th>
+                                        <th scope="col">Duration</th>
+                                        <th scope="col">Tour Category</th>
+                                        <th scope="col">Start City</th>
+                                        <th scope="col">End City</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Created At</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                <?php
+                                    <?php
 
-                                    if($packageArr != null ){
-                                        $i = 1;
-                                        ?>
+                                        if($packageArr != null ){
+                                            $i = 1;
+                                            ?>
 
-                                            @foreach ($packageArr as $package)
+                                                @foreach ($packageArr as $package)
+                                                <tr>
+                                                    <td><?php echo $i; ?></td>
+                                                    <td>{{ $package->package_name }}</td>
+                                                    <td>{{ $package->duration }}</td>
+                                                    <td>{{ $package->category_name }}</td>
+                                                    <td>{{ $package->startCity }} </td>
+                                                    <td>{{ $package->endCity }} </td>
+                                                    <td>
+                                                        <?php
+                                                            if($package->status == '0'){
+                                                                ?>
+                                                                <span class="badge bg-danger">Inactive</span>
+                                                                <?php
+                                                            } else {
+                                                                ?>
+                                                                <span class="badge bg-success">Active</span>
+                                                                <?php
+                                                            }
+                                                        ?>
+                                                    </td>
+                                                    <td>{{    date('Y-m-d', strtotime($package->created_at)) }}</td>
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <a href="{{ url('edit-tour-package/') }}/<?php echo $package->id; ?>"> <span class="btn btn-info text-dark h4 m-1">&#9998;</span> </a>
+                                                            <a href="{{route('add_eternity',$package->id)}}" class="btn btn-primary"> <i class="fa fa-plus"></i> </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <?php $i++; ?>
+                                                @endforeach
+
+                                            <?php
+                                        } else {
+                                            ?>
                                             <tr>
-                                                <td><?php echo $i; ?></td>
-                                                <td>{{ $package->package_name }}</td>
-                                                <td>{{ $package->duration }}</td>
-                                                <td>{{ $package->category_name }}</td>
-                                                <td>{{ $package->startCity }} </td>
-                                                <td>{{ $package->endCity }} </td>
-                                                <td>
-                                                    <?php
-                                                        if($package->status == '0'){
-                                                            ?>
-                                                            <span class="badge bg-danger">Inactive</span>
-                                                            <?php
-                                                        } else {
-                                                            ?>
-                                                            <span class="badge bg-success">Active</span>
-                                                            <?php
-                                                        }
-                                                    ?>
-                                                </td>
-                                                <td>{{    date('Y-m-d', strtotime($package->created_at)) }}</td>
-                                                <td>
-                                                    <a href="{{ url('edit-tour-package/') }}/<?php echo $package->id; ?>"> Edit </a>
-                                                    {{-- |  <a href="#"> Delete </a> --}}
-
-
-                                                </td>
+                                                <td colspan="9" style="text-align:center;">No packages were found!</td>
                                             </tr>
-                                            <?php $i++; ?>
-                                            @endforeach
+                                            @php
+                                        }
+                                    @endphp
 
-                                        <?php
-                                    } else {
-                                        ?>
-                                        <tr>
-                                            <td colspan="9" style="text-align:center;">No packages were found!</td>
-                                        </tr>
-                                        @php
-                                    }
-                                @endphp
-
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                         <!-- End Default Table Example -->
                     </div>
                 </div>

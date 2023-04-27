@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Eternity;
+use App\Models\TourPackages;
 use App\Repo\PackageService;
+use Exception;
 use Illuminate\Http\Request;
 
 
@@ -60,8 +63,8 @@ class PackageController extends Controller
         return response()->json($getCitiesData);
     }
 
-    public function saveTourPackage(Request $request){
-
+    public function saveTourPackage(Request $request)
+    {
         $saveTour = $this->packageService->saveTourPackage($request);
         if($saveTour){
             return redirect()->route('view-all-packages')->withSuccess('Tour Package saved successfully.');
@@ -72,6 +75,33 @@ class PackageController extends Controller
 
 
 
+public function add_eternity($id)
+{
+    $tourpackage = Eternity::where('package_id',$id)->get();
+   return view('admin.hotels.package.add_eternity',compact('tourpackage'));
+}
 
-
+public function store_eternity(Request $request)
+{
+    $request->validate([
+        'day'=>'required',
+        'title'=>'required',
+        'longDesc'=>'required',
+    ]);
+    try{
+        foreach($request->day as $key=>$day){
+            $res = Eternity::updateOrCreate(['id'=>$request->eternity_id[$key]],[
+                'day'=>$day,
+                'title'=>$request->title[$key],
+                'longdesc'=>$request->longDesc[$key],
+            ]);
+        }
+        if($res){
+            return redirect()->route('view-all-packages')->with('success','Eternity created successfully');
+        }
+    }
+    catch(Exception $ex){
+        return back()->with('error',$ex->getMessage());
+    }
+}
 }

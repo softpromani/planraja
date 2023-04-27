@@ -53,18 +53,6 @@
 
                                     <div class="tab-pane fade show active" id="basic" role="tabpanel"
                                         aria-labelledby="basic-tab">
-
-                                        <?php
-                                            if(isset($getTourPackage->id)){
-                                                ?>
-                                                <input type="hidden" value="<?php echo $getTourPackage->id; ?>" id="tourid" name="tourId" />
-                                                <?php
-                                            } else {
-                                                ?>
-                                                <input type="hidden" value="" id="tourid" name="tourId" />
-                                                <?php
-                                            }
-                                        ?>
                                         <div class="row mb-3">
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Package name</label>
                                             <div class="col-sm-10">
@@ -97,23 +85,9 @@
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="inputNumber" class="col-sm-2 col-form-label"></label>
+                                            <label for="inputEmail" class="col-sm-2 col-form-label">Long Description</label>
                                             <div class="col-sm-10">
-                                                &nbsp;&nbsp;&nbsp;&nbsp;<br/>
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-                                            <label for="longDesc" class="col-sm-2 col-form-label">Long Description</label>
-                                            <div class="col-sm-10">
-                                                <div class="quill-editor-full" id="editorTwo" name="editorTwo" style="height:450px;">
-                                                    <?php
-                                                        echo (isset($getTourPackage->description) ? $getTourPackage->description : 'Enter Long Description here');
-                                                    ?>
-                                                </div>
-                                                <textarea name="longDesc" style="display:none;" id="longDesc"><?php
-                                                        echo (isset($getTourPackage->description) ? $getTourPackage->description : '');
-                                                    ?></textarea>
+                                                <textarea class="editor form-control" placeholder="Enter Long Description" id="shortDesc" name="longDesc" style="height: 100px;"><?php echo (isset($getTourPackage->short_desc) ? $getTourPackage->short_desc : ''); ?></textarea>
                                             </div>
                                         </div>
 
@@ -128,6 +102,12 @@
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Duration</label>
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" name="duration" value="<?php echo (isset($getTourPackage->duration) ? $getTourPackage->duration : ''); ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="inputEmail" class="col-sm-2 col-form-label">Days</label>
+                                            <div class="col-sm-10">
+                                                <input type="number" class="form-control" name="days" value="{{ $getTourPackage->days??'' }}" required>
                                             </div>
                                         </div>
 

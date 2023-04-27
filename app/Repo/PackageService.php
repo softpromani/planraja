@@ -2,6 +2,7 @@
 namespace App\Repo;
 
 use App\Models\Cities;
+use App\Models\Eternity;
 use App\Models\TourPackageCategory;
 use App\Models\TourPackageImages;
 use App\Models\TourPackages;
@@ -102,6 +103,7 @@ class PackageService
         $addPackage->short_desc = $request->shortDesc;
         $addPackage->description = $request->longDesc;
         $addPackage->duration = $request->duration;
+        $addPackage->days = $request->days;
         $addPackage->tour_category_id = $request->tourCategoryId;
         $addPackage->start_city = $request->startCityId;
         $addPackage->end_city = $request->endCityId;
@@ -109,6 +111,12 @@ class PackageService
         $addPackage->save();
 
         $packageId = $addPackage->id;
+        for($x = 0; $x <= $request->days; $x++){
+            $res = Eternity::create([
+                'day'=>$x+1,
+                'package_id'=>$packageId,
+            ]);
+        }
         if ($request->hasfile('packageGallery')) {
             $imgArr = ['jpeg', 'jpg', 'png'];
             $i = 1;

@@ -60,6 +60,8 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::post('/save-package-category', [PackageController::class, 'savePackageCategory'])->name('save-package-category');
 
     Route::get('/view-all-packages', [PackageController::class, 'viewAllPackages'])->name('view-all-packages');
+    Route::get('/add-eternity/{id}', [PackageController::class, 'add_eternity'])->name('add_eternity');
+    Route::post('/store-eternity', [PackageController::class, 'store_eternity'])->name('store_eternity');
 
 
     Route::get('/add-tour-package', [PackageController::class, 'addTourPackage'])->name('add-tour-package');
