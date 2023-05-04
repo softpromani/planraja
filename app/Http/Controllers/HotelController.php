@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cities;
 use App\Models\Hotels;
+use App\Models\State;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Request;
 
@@ -28,8 +30,19 @@ class HotelController extends Controller
         $amenityArr = [];
         $aminityData = getAminitiesdata();
         $hotelImageArr = [];
+        $states = State::get();
 
-        return view('admin.hotels.add', compact('aminityData', 'amenityArr', 'hotelImageArr'));
+        return view('admin.hotels.add', compact('aminityData', 'amenityArr', 'hotelImageArr','states'));
+    }
+
+    public function getcity($id)
+    {
+        $cityies = Cities::where('state_id',$id)->get();
+        $html = '';
+        foreach($cityies as $ct){
+            $html.="<option value='".$ct->id."'>".$ct->city_name."</option>";
+        }
+        return $html;
     }
 
     public function saveHotel(Request $request){
@@ -52,14 +65,14 @@ class HotelController extends Controller
         $hotelImageArr = [];
 
         $hotelImageArr = getHotelImages($request->hotelId);
-
+        $states = State::get();
         $amenityArr = [];
         if($hotelDetail->amenities != ''){
             $amenityArr = explode(',', $hotelDetail->amenities);
         }
 
         if($hotelDetail != FALSE){
-            return view('admin.hotels.add', compact('hotelDetail', 'aminityData', 'amenityArr', 'hotelId', 'hotelImageArr'));
+            return view('admin.hotels.add', compact('hotelDetail', 'aminityData', 'amenityArr', 'hotelId', 'hotelImageArr','states'));
         } else {
             return redirect()->route('view-hotels')->withError('Something went wrong please try again!');
         }

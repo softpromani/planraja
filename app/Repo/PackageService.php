@@ -104,6 +104,7 @@ class PackageService
         $addPackage->description = $request->longDesc;
         $addPackage->duration = $request->duration;
         $addPackage->days = $request->days;
+        $addPackage->extra_charges = $request->extra_charges;
         $addPackage->tour_category_id = $request->tourCategoryId;
         $addPackage->start_city = $request->startCityId;
         $addPackage->end_city = $request->endCityId;

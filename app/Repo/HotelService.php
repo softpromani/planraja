@@ -49,6 +49,8 @@ class HotelService
         $newHotel->description = $request->longDesc;
         $newHotel->hotel_email_id = $request->hotelEmailId;
         $newHotel->hotel_phone_no = $request->hotelPhoneNo;
+        $newHotel->perday_ammount = $request->perday_ammount;
+        $newHotel->city_id = $request->city_id;
         if (isset($request->aminitiesArr) && count($request->aminitiesArr) > 0) {
             $newHotel->amenities = implode(',', $request->aminitiesArr);
         }

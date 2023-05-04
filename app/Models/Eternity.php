@@ -9,4 +9,8 @@ class Eternity extends Model
 {
     use HasFactory;
     Protected $guarded=[];
+    public function hotel()
+    {
+        return $this->belongsTo(Hotels::class,'hotel_id');
+    }
 }

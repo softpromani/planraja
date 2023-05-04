@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cities;
 use App\Models\Eternity;
+use App\Models\Hotels;
 use App\Models\TourPackages;
 use App\Repo\PackageService;
 use Exception;
@@ -65,6 +67,17 @@ class PackageController extends Controller
 
     public function saveTourPackage(Request $request)
     {
+        $request->validate([
+            'categoryname'=>'required',
+            'tourCategoryId'=>'required',
+            'shortDesc'=>'required',
+            'longDesc'=>'required',
+            'duration'=>'required',
+            'days'=>'required',
+            'startCityId'=>'required',
+            'endCityId'=>'required',
+            'status'=>'required',
+        ]);
         $saveTour = $this->packageService->saveTourPackage($request);
         if($saveTour){
             return redirect()->route('view-all-packages')->withSuccess('Tour Package saved successfully.');
@@ -78,13 +91,24 @@ class PackageController extends Controller
 public function add_eternity($id)
 {
     $tourpackage = Eternity::where('package_id',$id)->get();
-   return view('admin.hotels.package.add_eternity',compact('tourpackage'));
+    $cities= Cities::where('state_id',5)->get();
+   return view('admin.hotels.package.add_eternity',compact('tourpackage','cities'));
 }
-
+public function hotel_eternity($id)
+{
+   $hotels = Hotels::where('city_id',$id)->get();
+   $html = '<option selected disabled hidden>-select-</option>';
+   foreach($hotels as $ht){
+    $html.="<option value='".$ht->id."'>".$ht->hotel_name."</option>";
+   }
+   return $html;
+}
 public function store_eternity(Request $request)
 {
     $request->validate([
         'day'=>'required',
+        'hotel_id'=>'required',
+        'city_id'=>'required',
         'title'=>'required',
         'longDesc'=>'required',
     ]);
@@ -92,6 +116,8 @@ public function store_eternity(Request $request)
         foreach($request->day as $key=>$day){
             $res = Eternity::updateOrCreate(['id'=>$request->eternity_id[$key]],[
                 'day'=>$day,
+                'hotel_id'=>$request->hotel_id[$key],
+                'city_id'=>$request->city_id[$key],
                 'title'=>$request->title[$key],
                 'longdesc'=>$request->longDesc[$key],
             ]);

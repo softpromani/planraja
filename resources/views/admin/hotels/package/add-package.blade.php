@@ -32,7 +32,7 @@
                             <form name="hotelForm" method="POST" enctype="multipart/form-data"
                                 action="{{ route('save-tour-package') }}">
                                 @csrf
-
+                                <input type="hidden" value="{{$getTourPackage->id??''}}" name="tourId">
 
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -98,6 +98,12 @@
                                             </div>
                                         </div>
 
+                                        <div class="row mb-3">
+                                            <label for="inputEmail" class="col-sm-2 col-form-label">Extra Charges</label>
+                                            <div class="col-sm-10">
+                                                <input type="number" class="form-control" name="extra_charges" value="{{$getTourPackage->extra_charges ??''}}" required>
+                                            </div>
+                                        </div>
                                         <div class="row mb-3">
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Duration</label>
                                             <div class="col-sm-10">

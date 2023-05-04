@@ -11,6 +11,7 @@ use App\Http\Controllers\CommonController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\PackageController;
+use App\Models\TourPackages;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,8 @@ use App\Http\Controllers\PackageController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $datas = TourPackages::where('status','1')->get();
+    return view('welcome',compact('datas'));
 });
 
 Route::get('/admin-panel', [LoginController::class, 'index'])->name('admin-panel');
@@ -40,6 +42,7 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('/view-hotels', [HotelController::class, 'index'])->name('view-hotels');
 
     Route::get('/add-hotels', [HotelController::class, 'addHotels'])->name('add-hotels');
+    Route::get('getcity/{id}', [HotelController::class, 'getcity'])->name('getcity');
     Route::post('/save-hotel', [HotelController::class, 'saveHotel'])->name('save-hotel');
 
     Route::get('/edit-hotels/{hotelId}', [HotelController::class, 'editHotels'])->name('edit-hotels');
@@ -62,6 +65,7 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('/view-all-packages', [PackageController::class, 'viewAllPackages'])->name('view-all-packages');
     Route::get('/add-eternity/{id}', [PackageController::class, 'add_eternity'])->name('add_eternity');
     Route::post('/store-eternity', [PackageController::class, 'store_eternity'])->name('store_eternity');
+    Route::get('/eternity-hotel/{id}', [PackageController::class, 'hotel_eternity'])->name('hotel_eternity');
 
 
     Route::get('/add-tour-package', [PackageController::class, 'addTourPackage'])->name('add-tour-package');

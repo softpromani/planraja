@@ -222,10 +222,11 @@
             </div>
             <div class="trend-box">
                 <div class="row">
+                    @foreach ($datas as $data)
                     <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
                         <div class="trend-item">
                             <div class="trend-image">
-                                <img src="https://img.freepik.com/free-photo/udaipur-city-view-from-hotel-balcony-rajasthan-india_53876-65505.jpg?w=2000&t=st=1669533247~exp=1669533847~hmac=969873ad3d77d8952f2eb85f3b0a1eb178609de906829dee7c1adf16e8c76db8"
+                                <img src="{{asset($data->packageimage[0]->image??'')}}"
                                     alt="image">
                                 <div class="trend-tags">
                                     <a href="#"><i class="flaticon-like"></i></a>
@@ -233,9 +234,9 @@
                             </div>
                             <div class="trend-content-main">
                                 <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Thailand
+                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> {{$data->cityname->city_name??''}}
                                     </h6>
-                                    <h4><a href="#">Stonehenge, Windsor Castle, and Bath from London</a></h4>
+                                    <h4><a href="#">{{$data->package_name??''}}</a></h4>
                                     <div class="rating-main d-flex align-items-center">
                                         <div class="rating">
                                             <span class="fa fa-star checked"></span>
@@ -247,215 +248,20 @@
                                         <span class="ml-2">38 Reviews</span>
                                     </div>
                                 </div>
+
                                 <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                        perfect for exploring.</p>
+                                    <p class="mb-0 trend-para">{{$data->short_desc??''}}</p>
                                     <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days
-                                            & 2 night</p>
+                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> {{$data->duration??''}}</p>
                                         <div class="trend-price">
-                                            <p class="price white mb-0">From <span>$350.00</span></p>
+                                            <p class="price white mb-0">From <span>{{number_format($data->total_price,2)}}</span></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="trend-item">
-                            <div class="trend-image">
-                                <img src="https://img.freepik.com/free-photo/arab-people-with-camel-caravan_1004-19.jpg?w=2000&t=st=1669533284~exp=1669533884~hmac=96f70d11bad0597932cac6a10b60425aa0a69c0fae12e492d2279cc13cdec51e"
-                                    alt="image">
-                                <div class="trend-tags">
-                                    <a href="#"><i class="flaticon-like"></i></a>
-                                </div>
-                            </div>
-                            <div class="trend-content-main">
-                                <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Germany
-                                    </h6>
-                                    <h4><a href="#">Here We Bosphorus and Black Sea Cruise from Istanbul</a></h4>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ml-2">38 Reviews</span>
-                                    </div>
-                                </div>
-                                <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                        perfect for exploring.</p>
-                                    <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days
-                                            & 2 night</p>
-                                        <div class="trend-price">
-                                            <p class="price white mb-0">From <span>$350.00</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="trend-item">
-                            <div class="trend-image">
-                                <img src="https://img.freepik.com/free-photo/girl-playing-guitar-sunset_1004-18.jpg?w=2000&t=st=1669533300~exp=1669533900~hmac=1bf402576883a8949ee67c82e01c6920e01b3696b53da559ae7e673378954388"
-                                    alt="image">
-                                <div class="trend-tags">
-                                    <a href="#"><i class="flaticon-like"></i></a>
-                                </div>
-                            </div>
-                            <div class="trend-content-main">
-                                <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Denmark
-                                    </h6>
-                                    <h4><a href="#">NYC One World Observatory Skip-the-Line Ticket</a></h4>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ml-2">38 Reviews</span>
-                                    </div>
-                                </div>
-                                <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                        perfect for exploring.</p>
-                                    <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days
-                                            & 2 night</p>
-                                        <div class="trend-price">
-                                            <p class="price white mb-0">From <span>$350.00</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="trend-item">
-                            <div class="trend-image">
-                                <img src="https://img.freepik.com/premium-photo/jaswanth-thada-mausoleum-jodhpur-rajasthan-india_163782-8069.jpg?w=2000"
-                                    alt="image">
-                                <div class="trend-tags">
-                                    <a href="#"><i class="flaticon-like"></i></a>
-                                </div>
-                            </div>
-                            <div class="trend-content-main">
-                                <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Japan
-                                    </h6>
-                                    <h4><a href="#">Stonehenge, Windsor Castle, and Bath from London</a></h4>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ml-2">38 Reviews</span>
-                                    </div>
-                                </div>
-                                <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                        perfect for exploring.</p>
-                                    <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days
-                                            & 2 night</p>
-                                        <div class="trend-price">
-                                            <p class="price white mb-0">From <span>$350.00</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="trend-item">
-                            <div class="trend-image">
-                                <img src="https://img.freepik.com/free-photo/western-woman-enjoying-view-pushkar-lake-rajasthan_53876-65351.jpg?w=2000&t=st=1669533338~exp=1669533938~hmac=da64e03bc95b76ffdcb9bc901d29c1ea1db7c548f541bd4e017322824ef7cabc"
-                                    alt="image">
-                                <div class="trend-tags">
-                                    <a href="#"><i class="flaticon-like"></i></a>
-                                </div>
-                            </div>
-                            <div class="trend-content-main">
-                                <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Italy
-                                    </h6>
-                                    <h4><a href="#">Here We Bosphorus and Black Sea Cruise from Istanbul</a></h4>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ml-2">38 Reviews</span>
-                                    </div>
-                                </div>
-                                <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                        perfect for exploring.</p>
-                                    <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days
-                                            & 2 night</p>
-                                        <div class="trend-price">
-                                            <p class="price white mb-0">From <span>$350.00</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="trend-item">
-                            <div class="trend-image">
-                                <img src="https://img.freepik.com/premium-photo/hawa-mahal-palace-jaipur-india-beautiful-sunset-view_400112-259.jpg?w=2000"
-                                    alt="image">
-                                <div class="trend-tags">
-                                    <a href="#"><i class="flaticon-like"></i></a>
-                                </div>
-                            </div>
-                            <div class="trend-content-main">
-                                <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Turkey
-                                    </h6>
-                                    <h4><a href="#">NYC One World Observatory Skip-the-Line Ticket</a></h4>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ml-2">38 Reviews</span>
-                                    </div>
-                                </div>
-                                <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                        perfect for exploring.</p>
-                                    <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days
-                                            & 2 night</p>
-                                        <div class="trend-price">
-                                            <p class="price white mb-0">From <span>$350.00</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
