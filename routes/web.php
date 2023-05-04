@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\PackageController;
-use App\Models\TourPackages;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +24,11 @@ use App\Models\TourPackages;
 |
 */
 
-Route::get('/', function () {
-    $datas = TourPackages::where('status','1')->get();
-    return view('welcome',compact('datas'));
-});
+// Route::get('/', function () {
+
+// });
+
+
 
 Route::get('/admin-panel', [LoginController::class, 'index'])->name('admin-panel');
 Route::post('/login-check', [LoginController::class, 'loginCheck'])->name('login-check');
@@ -36,7 +37,7 @@ Route::post('/login-check', [LoginController::class, 'loginCheck'])->name('login
 // Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 // Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
-Route::middleware('auth:sanctum')->group(function() {
+Route::middleware('auth:sanctum')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
     Route::get('/view-hotels', [HotelController::class, 'index'])->name('view-hotels');
@@ -75,15 +76,16 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::post('/save-tour-package', [PackageController::class, 'saveTourPackage'])->name('save-tour-package');
 
     Route::get('/get-cities', [PackageController::class, 'getCities'])->name('get-cities');
-
-
 });
 
-Route::get('/logout', function(Request $request){
+Route::get('/logout', function (Request $request) {
     Auth::logout();
     Artisan::call('cache:clear');
     return redirect("/admin-panel")->with("status", "You have been logged out !");
 })->name('logout');
+
+Route::any('/', [HomeController::class, 'home'])->name('home');
+Route::get('package-details/{id}', [HomeController::class, 'singlePackage'])->name('singlePackage');
 
 Route::get('/about-us', [CommonController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/contact-us', [CommonController::class, 'contactUs'])->name('contactUs');

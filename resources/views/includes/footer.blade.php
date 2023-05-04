@@ -98,8 +98,7 @@
                                 <div>
                                     <div class="contact_info_icon"><img src="{{asset('asset/images/message.svg')}}" alt=""></div>
                                 </div>
-                                <div class="contact_info_text"><a href="/cdn-cgi/l/email-protection#ea8985849e8b899e878faa8d878b8386c4898587d5b99f88808f899ed7a28f868685" target="_top"><span class="__cf_email__"
-                                            data-cfemail="11727e7f657072657c7451767c70787d3f727e7c">[email&#160;protected]</span></a>
+                                <div class="contact_info_text"><a href="/cdn-cgi/l/email-protection#ea8985849e8b899e878faa8d878b8386c4898587d5b99f88808f899ed7a28f868685" target="_top"><span class="__cf_email__" data-cfemail="11727e7f657072657c7451767c70787d3f727e7c">[email&#160;protected]</span></a>
                                 </div>
                             </li>
                             <li class="contact_info_item d-flex flex-row">
@@ -151,11 +150,14 @@
 <script src="{{asset('asset/js/jquery-3.2.1.min.js')}}"></script>
 <script src="{{asset('asset/styles/bootstrap4/popper.js')}}"></script>
 <script src="{{asset('asset/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{asset('asset/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
 <script src="{{asset('asset/plugins/easing/easing.js')}}"></script>
+<script src="{{asset('asset/plugins/parallax-js-master/parallax.min.js')}}"></script>
+<script src="{{asset('asset/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
+<script src="{{asset('asset/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
 <script src="{{asset('asset/js/custom.js')}}"></script>
-<script defer="" src="../../beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c1ecc384eadf390","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
-crossorigin="anonymous"></script>
+<script src="../../maps/api/js.html?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+<script src="{{asset('asset/js/single_listing_custom.js')}}"></script>
+<script defer="" src="../../beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c1ecc384eadf390","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
 </body>
 
 </html>

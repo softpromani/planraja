@@ -13,13 +13,20 @@ class Hotels extends Model
 {
     use HasFactory;
 
-    public function hotelAddress(){
+    public function hotelAddress()
+    {
         return $this->hasOne(HotelAddresses::class, 'hotel_id');
     }
-    public function hotelContact(){
+    public function hotelContact()
+    {
         return $this->hasOne(HotelContacts::class, 'hotel_id');
     }
-    public function hotelGst(){
+    public function hotelGst()
+    {
         return $this->hasOne(HotelGstDetails::class, 'hotel_id');
+    }
+    public function hotelPhoto()
+    {
+        return $this->hasMany(HotelPhotos::class, 'hotel_id');
     }
 }
