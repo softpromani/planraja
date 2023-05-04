@@ -3,174 +3,230 @@
 @section('content')
 
 <!-- BreadCrumb Starts -->
-    <!-- <section class="breadcrumb-main pb-0" style="background-image: {{ url('images/about-2.jpg') }};"> -->
-    <section class="breadcrumb-main pb-0" style=" background-image: url('{{asset('images/about-2.jpg')}}');">
-    	 
-        <div class="breadcrumb-outer pt-10">
-            <div class="container">
-                <div class="breadcrumb-content d-md-flex align-items-center pt-10">
-                    <h2 class="mb-0">About Us</h2>
-                    <nav aria-label="breadcrumb">
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active"
-                                aria-current="page">About Us</li>
-                        </ul>
-                    </nav>
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/about_background.jpg"></div>
+    <div class="home_content">
+        <div class="home_title">about us</div>
+    </div>
+</div>
+
+<div class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="intro_image"><img src="images/intro.png" alt=""></div>
+            </div>
+            <div class="col-lg-5">
+                <div class="intro_content">
+                    <div class="intro_title">we have the best tours</div>
+                    <p class="intro_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer elementum orci eu vehicula pretium. Donec bibendum tristique condimentum. Aenean in
+                        lacus ligula. Phasellus euismod gravida eros. Aenean nec ipsum aliquet, pharetra magna id, interdum sapien. Etiam id lorem eu nisl pellentesque semper. Nullam tincidunt metus placerat, suscipit leo ut, tempus nulla. Fusce
+                        at eleifend tellus. Ut eleifend dui nunc, non fermentum quam placerat non. Etiam venenatis nibh augue, sed eleifend justo tristique eu</p>
+                    <div class="button intro_button">
+                        <div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
                 </div>
             </div>
         </div>
-        <div class="dot-overlay"></div>
-    </section>
-    <!-- BreadCrumb Ends -->
+    </div>
+</div>
 
-    <!-- form starts -->
-    <section class="about-us">
-        <div class="container">
-            <div class="about-image-box">
-                <div class="row d-flex align-items-center justify-content-between">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="about-content">
-                            <h4 class="mb-1 blue font-weight-normal">About planrajasthan</h4>
-                            <h2>We're truely dedicated to make your travel experience best</h2>
-                            <p class="mb-3">Top Tour Operators and Travel Agency. We offering in total 793 tours and
-                                holidays throughout the world. Combined we have received 1532 customer reviews and an
-                                average rating of 5 out of 5 stars. <br><br>Travel has helped us to understand the
-                                meaning of life and it has helped us become better people. Each time we travel, we see
-                                the world with new eyes.</p>
-                            <div class="about-imagelist">
-                                <ul class="d-flex justify-content-between">
-                                    <li class="mr-2">
-                                        <img src="{{ asset('images/about-1.jpg') }}" alt="">
-                                    </li>
-                                    <li class="mr-2">
-                                        <img src="{{ asset('images/about-2.jpg') }}" alt="">
-                                    </li>
-                                    <li class="mr-2">
-                                        <img src="{{ asset('images/about-3.jpg') }}"
-                                             alt="">
-                                    </li>
-                                    <li class="mr-2">
-                                        <img src="{{ asset('images/about-4.jpg') }}" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset('images/about-5.jpg') }}" alt="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="about-image">
-                            <img src="{{ asset('images/about-2.jpg') }}" alt="">
-                        </div>
-                    </div>
-                </div>
+<div class="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="section_title">years statistics</div>
             </div>
-
         </div>
-    </section>
-    <!-- form ends -->
-
-    <!-- about-us starts -->
-    <section class="about-us1 bg-grey pb-6">
-        <div class="container">
-            <div class="about-image-box">
-                <div class="row d-flex align-items-center justify-content-between">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="about-content">
-                            <h2 class="">Why Choose Us</h2>
-                            <p class="mb-2">Top Tour Operators and Travel Agency. We offering in total 793 tours and
-                                holidays throughout the world. Combined we have received 1532 customer reviews and an
-                                average rating of 5 out of 5 stars. <br>Travel has helped us to understand the meaning
-                                of life and it has helped us become better people. Each time we travel, we see the world
-                                with new eyes.</p>
-                            <div class="about-featured mb-0">
-                                <ul>
-                                    <li>Safety Travel System</li>
-                                    <li>Budget-Friendly Tour</li>
-                                    <li>Expert Trip Planning</li>
-                                    <li>Fast Communication</li>
-                                    <li>Right Solution & Guide</li>
-                                    <li>24/7 Customer Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="about-image-main">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 mt-4 mb-4">
-                                    <img src="{{ asset('images/about-1.jpg') }}" alt="">
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <img src="{{ asset('images/about-1.jpg') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 text-center">
+                <p class="stats_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer elementum orci eu vehicula pretium. Donec bibendum tristique condimentum. Aenean in lacus
+                    ligula. </p>
             </div>
-
-            <!-- why us starts -->
-            <div class="why-us pt-4 border-t">
-                <div class="why-us-box">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="why-us-item text-center bg-lgrey">
-                                <div class="why-us-icon mb-2">
-                                    <i class="flaticon-call pink"></i>
-                                </div>
-                                <div class="why-us-content">
-                                    <h4><a href="#">Advice & Support</a></h4>
-                                    <p class="mb-0">Travel worry free knowing that we're here if you need us, 24 hours a
-                                        day</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="why-us-item text-center bg-lgrey">
-                                <div class="why-us-icon mb-2">
-                                    <i class="flaticon-global pink"></i>
-                                </div>
-                                <div class="why-us-content">
-                                    <h4><a href="#">Air Ticketing</a></h4>
-                                    <p class="mb-0">Travel worry free knowing that we're here if you need us, 24 hours a
-                                        day</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="why-us-item text-center bg-lgrey">
-                                <div class="why-us-icon mb-2">
-                                    <i class="flaticon-building pink"></i>
-                                </div>
-                                <div class="why-us-content">
-                                    <h4><a href="#">Hotel Services</a></h4>
-                                    <p class="mb-0">Travel worry free knowing that we're here if you need us, 24 hours a
-                                        day</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                            <div class="why-us-item text-center bg-lgrey">
-                                <div class="why-us-icon mb-2">
-                                    <i class="flaticon-location-pin pink"></i>
-                                </div>
-                                <div class="why-us-content">
-                                    <h4><a href="#">Tour Packages</a></h4>
-                                    <p class="mb-0">Travel worry free knowing that we're here if you need us, 24 hours a
-                                        day</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- why us ends -->
         </div>
-    </section>
-    <!-- about-us ends -->
+        <div class="row">
+            <div class="col">
+                <div class="stats_years">
+                    <div class="stats_years_last">2016</div>
+                    <div class="stats_years_new float-right">2017</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="stats_contents">
+
+                    <div class="stats_item d-flex flex-md-row flex-column clearfix">
+                        <div class="stats_last order-md-1 order-3">
+                            <div class="stats_last_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_1.png" alt="">
+                            </div>
+                            <div class="stats_last_content">
+                                <div class="stats_number">1642</div>
+                                <div class="stats_type">Clients</div>
+                            </div>
+                        </div>
+                        <div class="stats_bar order-md-2 order-2" data-x="1642" data-y="3527" data-color="#31124b">
+                            <div class="stats_bar_perc">
+                                <div>
+                                    <div class="stats_bar_value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats_new order-md-3 order-1 text-right">
+                            <div class="stats_new_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_1.png" alt="">
+                            </div>
+                            <div class="stats_new_content">
+                                <div class="stats_number">3527</div>
+                                <div class="stats_type">Clients</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats_item d-flex flex-md-row flex-column clearfix">
+                        <div class="stats_last order-md-1 order-3">
+                            <div class="stats_last_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_2.png" alt="">
+                            </div>
+                            <div class="stats_last_content">
+                                <div class="stats_number">768</div>
+                                <div class="stats_type">Returning Clients</div>
+                            </div>
+                        </div>
+                        <div class="stats_bar order-md-2 order-2" data-x="768" data-y="145" data-color="#a95ce4">
+                            <div class="stats_bar_perc">
+                                <div>
+                                    <div class="stats_bar_value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats_new order-md-3 order-1 text-right">
+                            <div class="stats_new_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_2.png" alt="">
+                            </div>
+                            <div class="stats_new_content">
+                                <div class="stats_number">145</div>
+                                <div class="stats_type">Returning Clients</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats_item d-flex flex-md-row flex-column clearfix">
+                        <div class="stats_last order-md-1 order-3">
+                            <div class="stats_last_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_3.png" alt="">
+                            </div>
+                            <div class="stats_last_content">
+                                <div class="stats_number">11546</div>
+                                <div class="stats_type">Reach</div>
+                            </div>
+                        </div>
+                        <div class="stats_bar order-md-2 order-2" data-x="11546" data-y="9321" data-color="#fa6f1b">
+                            <div class="stats_bar_perc">
+                                <div>
+                                    <div class="stats_bar_value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats_new order-md-3 order-1 text-right">
+                            <div class="stats_new_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_3.png" alt="">
+                            </div>
+                            <div class="stats_new_content">
+                                <div class="stats_number">9321</div>
+                                <div class="stats_type">Reach</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats_item d-flex flex-md-row flex-column clearfix">
+                        <div class="stats_last order-md-1 order-3">
+                            <div class="stats_last_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_4.png" alt="">
+                            </div>
+                            <div class="stats_last_content">
+                                <div class="stats_number">3729</div>
+                                <div class="stats_type">Items</div>
+                            </div>
+                        </div>
+                        <div class="stats_bar order-md-2 order-2" data-x="3729" data-y="17429" data-color="#fa9e1b">
+                            <div class="stats_bar_perc">
+                                <div>
+                                    <div class="stats_bar_value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats_new order-md-3 order-1 text-right">
+                            <div class="stats_new_icon d-flex flex-column align-items-center justify-content-end">
+                                <img src="images/stats_4.png" alt="">
+                            </div>
+                            <div class="stats_new_content">
+                                <div class="stats_number">17429</div>
+                                <div class="stats_type">More Items</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="add">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="add_container">
+                    <div class="add_background" style="background-image:url(images/add.jpg)"></div>
+                    <div class="add_content">
+                        <h1 class="add_title">thailand</h1>
+                        <div class="add_subtitle">From <span>$999</span></div>
+                        <div class="button add_button">
+                            <div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="milestones">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img src="images/milestone_1.png" alt=""></div>
+                    <div class="milestone_counter" data-end-value="255">0</div>
+                    <div class="milestone_text">Clients</div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img src="images/milestone_2.png" alt=""></div>
+                    <div class="milestone_counter" data-end-value="1176">0</div>
+                    <div class="milestone_text">Projects</div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img src="images/milestone_3.png" alt=""></div>
+                    <div class="milestone_counter" data-end-value="39">0</div>
+                    <div class="milestone_text">Countries</div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 milestone_col">
+                <div class="milestone text-center">
+                    <div class="milestone_icon"><img src="images/milestone_4.png" alt=""></div>
+                    <div class="milestone_counter" data-end-value="127">0</div>
+                    <div class="milestone_text">Coffees</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endSection

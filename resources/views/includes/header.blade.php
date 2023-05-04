@@ -1,101 +1,104 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+<html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
+    <title>Travelix</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travelix Project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Plan Rajasthan Trip</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
-    <!--Custom CSS-->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
-    <!--Plugin CSS-->
-    <link href="{{ asset('css/plugin.css') }}" rel="stylesheet" type="text/css">
-    <!--Flaticons CSS-->
-    <link href="{{ asset('fonts/flaticon.css')}} " rel="stylesheet" type="text/css">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/styles/bootstrap4/bootstrap.min.css')}}">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/plugins/OwlCarousel2-2.2.1/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/styles/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/styles/responsive.css')}}">
 </head>
 
 <body>
+    <div class="super_container">
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
-    <!-- Preloader Ends -->
+        <header class="header">
 
-    <!-- header starts -->
-    <header class="main_header_area headerstye-1">
-        <!-- Navigation Bar -->
-        <div class="header_menu" id="header_menu">
-            <nav class="navbar navbar-default">
+            <div class="top_bar">
                 <div class="container">
-                    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="/">
-                                <img src="{{ asset('images/icon.png') }}" class="main-logo" alt="image">
-                                <img src="{{ asset('images/icon.png') }}" alt="image" class="main-logo">
-                            </a>
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="phone">+45 345 3324 56789</div>
+                            <div class="social">
+                                <ul class="social_list">
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-pinterest"
+												aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-facebook"
+												aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-twitter"
+												aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-dribbble"
+												aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-behance"
+												aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-linkedin"
+												aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="user_box ml-auto">
+                                <div class="user_box_login user_box_link"><a href="#">login</a></div>
+                                <div class="user_box_register user_box_link"><a href="#">register</a></div>
+                            </div>
                         </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav" id="responsive-menu">
-
-                                <li><a href="/">Home</a></li>
-                                <li class="submenu dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                        aria-haspopup="true" aria-expanded="false">Packages <i class="icon-arrow-down"
-                                            aria-hidden="true"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="">Family</a></li>
-                                        <li><a href="">Friends</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="submenu dropdown">
-                                    <a href="destination.html" class="dropdown-toggle" data-toggle="dropdown"
-                                        role="button" aria-haspopup="true" aria-expanded="false">Tours <i
-                                            class="icon-arrow-down" aria-hidden="true"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="destination-list.html">College Tour</a></li>
-                                        <li><a href="destination-grid.html">Family Tour</a></li>
-                                        <li><a href="destination-full.html">Honeymoon Tour</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="submenu dropdown">
-                                    <a href="blog-home.html" class="dropdown-toggle" data-toggle="dropdown"
-                                        role="button" aria-haspopup="true" aria-expanded="false">Movie <i
-                                            class="icon-arrow-down" aria-hidden="true"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="blog-list.html">Movie Shoot</a></li>
-                                        <li><a href="blog-grid.html">Pre Wedding Shoot</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us">About Us</a></li>
-                                <li><a href="contact-us">Contact Us</a></li>
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-
-                        <div class="register-login">
-                            <a href="#" class="mr-2" data-toggle="modal" data-target="#register"><i
-                                    class="icon-user mr-1"></i> Plan Your Trip</a>
-                        </div>
-
-                        <div id="slicknav-mobile"></div>
                     </div>
-                </div><!-- /.container-fluid -->
+                </div>
+            </div>
+
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+                            <div class="logo_container">
+                                <div class="logo">
+                                    <a href="#"><img src="{{asset('images/logo.png')}}" width="150px" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="main_nav_container ml-auto">
+                                <ul class="main_nav_list">
+                                    <li class="main_nav_item"><a href="#">home</a></li>
+                                    <li class="main_nav_item"><a href="about.html">about us</a></li>
+                                    <li class="main_nav_item"><a href="offers.html">offers</a></li>
+                                    <li class="main_nav_item"><a href="blog.html">news</a></li>
+                                    <li class="main_nav_item"><a href="contact.html">contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="content_search ml-lg-0 ml-auto">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewbox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+									<g>
+										<g>
+											<g>
+												<path class="mag_glass" fill="#FFFFFF" d="M78.438,216.78c0,57.906,22.55,112.343,63.493,153.287c40.945,40.944,95.383,63.494,153.287,63.494
+											s112.344-22.55,153.287-63.494C489.451,329.123,512,274.686,512,216.78c0-57.904-22.549-112.342-63.494-153.286
+											C407.563,22.549,353.124,0,295.219,0c-57.904,0-112.342,22.549-153.287,63.494C100.988,104.438,78.439,158.876,78.438,216.78z
+											M119.804,216.78c0-96.725,78.69-175.416,175.415-175.416s175.418,78.691,175.418,175.416
+											c0,96.725-78.691,175.416-175.416,175.416C198.495,392.195,119.804,313.505,119.804,216.78z"></path>
+											</g>
+										</g>
+										<g>
+											<g>
+												<path class="mag_glass" fill="#FFFFFF" d="M6.057,505.942c4.038,4.039,9.332,6.058,14.625,6.058s10.587-2.019,14.625-6.058L171.268,369.98
+											c8.076-8.076,8.076-21.172,0-29.248c-8.076-8.078-21.172-8.078-29.249,0L6.057,476.693
+											C-2.019,484.77-2.019,497.865,6.057,505.942z"></path>
+											</g>
+										</g>
+									</g>
+								</svg>
+                            </div>
+                            <form id="search_form" class="search_form bez_1">
+                                <input type="search" class="search_content_input bez_1">
+                            </form>
+                            <div class="hamburger">
+                                <i class="fa fa-bars trans_200"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </nav>
-        </div>
-        <!-- Navigation Bar Ends -->
-    </header>
-    <!-- header ends -->
+        </header>
