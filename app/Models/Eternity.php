@@ -13,4 +13,8 @@ class Eternity extends Model
     {
         return $this->belongsTo(Hotels::class,'hotel_id');
     }
+    public function hotelphotos()
+    {
+        return $this->hasMany(HotelPhotos::class,'hotel_id');
+    }
 }

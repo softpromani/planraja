@@ -25,14 +25,7 @@
   <!-- Template Main JS File -->
   <script src="{{ asset('nice-admin/js/main.js') }} "></script>
   <script src="{{ asset('js/select2.min.js') }} "></script>
-  <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
-  <script>
-    ClassicEditor
-        .create( document.querySelector( '.editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
+
 
   </body>
 

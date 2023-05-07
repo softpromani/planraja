@@ -1,747 +1,1349 @@
 @extends('layouts.guest')
 
 @section('content')
-<div class="menu trans_500">
-    <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-        <div class="menu_close_container">
-            <div class="menu_close"></div>
-        </div>
-        <div class="logo menu_logo">
-            <a href="#"><img src="{{asset('asset/images/logo.png')}}" alt=""></a>
-        </div>
-        <ul>
-            <li class="menu_item"><a href="#">home</a></li>
-            <li class="menu_item"><a href="about.html">about us</a></li>
-            <li class="menu_item"><a href="offers.html">offers</a></li>
-            <li class="menu_item"><a href="blog.html">news</a></li>
-            <li class="menu_item"><a href="contact.html">contact</a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="home">
-
-    <div class="home_slider_container">
-        <div class="owl-carousel owl-theme home_slider">
-
-            <div class="owl-item home_slider_item">
-
-                <div class="home_slider_background" style="background-image:url({{asset('asset/images/home_slider.jpg')}})"></div>
-                <div class="home_slider_content text-center">
-                    <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-                        <h1>discover</h1>
-                        <h1>the world</h1>
-                        <div class="button home_slider_button">
-                            <div class="button_bcg"></div><a href="#">explore
-                                now<span></span><span></span><span></span></a>
+    <!-- banner starts -->
+    <section class="banner overflow-hidden">
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <div class="slide-image"
+                                style="background-image:url(https://img.freepik.com/free-photo/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand_335224-1094.jpg?w=2000&t=st=1669533750~exp=1669534350~hmac=0b377a254417646489b9f43aaa8d335fc91854f1b81758d39e097e8262d3704d)">
+                            </div>
+                            <div class="swiper-content container">
+                                <h4 class="blue">Amazing Places</h4>
+                                <h1 class="white mb-4">Explore Your Life Travel Where You Want</h1>
+                                <a href="#" class="per-btn">
+                                    <span class="white">Discover</span>
+                                    <i class="fa fa-arrow-right white"></i>
+                                </a>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <div class="slide-image"
+                                style="background-image:url(https://img.freepik.com/free-photo/woman-walking-kelingking-beach-nusa-penida-island-bali-indonesia_335224-337.jpg?w=2000&t=st=1669532790~exp=1669533390~hmac=ad4c36d58fa718e907ec3f7ca4d38bbe88429189828d9aec435189a047b925b7g)">
+                            </div>
+                            <div class="swiper-content container">
+                                <h4 class="blue">Feel Free To Travel</h4>
+                                <h1 class="white mb-4">Make you Free to <span>travel</span> with us</h1>
+                                <a href="#" class="per-btn">
+                                    <span class="white">Discover</span>
+                                    <i class="fa fa-arrow-right white"></i>
+                                </a>
+                            </div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-inner">
+                            <div class="slide-image"
+                                style="background-image:url(https://img.freepik.com/free-photo/top-view-hands-holding-smartphone_23-2149617652.jpg?w=2000&t=st=1669532802~exp=1669533402~hmac=eb1b9c1d8c515d41a2a5003caa6c96b6b0cd89f25aa35cebe800352740b105bf)">
+                            </div>
+                            <div class="swiper-content container">
+                                <h4 class="blue">Trip For Your Kids</h4>
+                                <h1 class="white mb-4"><span>Sensation Ice Trip</span> Is Coming For Kids</h1>
+                                <a href="#" class="per-btn">
+                                    <span class="white">Discover</span>
+                                    <i class="fa fa-arrow-right white"></i>
+                                </a>
+                            </div>
+                            <div class="overlay"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="owl-item home_slider_item">
-                <div class="home_slider_background" style="background-image:url({{asset('asset/images/home_slider.jpg')}})"></div>
-                <div class="home_slider_content text-center">
-                    <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-                        <h1>discover</h1>
-                        <h1>the world</h1>
-                        <div class="button home_slider_button">
-                            <div class="button_bcg"></div><a href="#">explore
-                                now<span></span><span></span><span></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="owl-item home_slider_item">
-                <div class="home_slider_background" style="background-image:url({{asset('asset/images/home_slider.jpg')}})"></div>
-                <div class="home_slider_content text-center">
-                    <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-                        <h1>discover</h1>
-                        <h1>the world</h1>
-                        <div class="button home_slider_button">
-                            <div class="button_bcg"></div><a href="#">explore
-                                now<span></span><span></span><span></span></a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
+    </section>
+    <!-- banner ends -->
 
-        <div class="home_slider_nav home_slider_prev">
-            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="33px" viewbox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
-                <defs>
-                    <lineargradient id='home_grad_prev'>
-                        <stop offset='0%' stop-color='#fa9e1b'></stop>
-                        <stop offset='100%' stop-color='#8d4fff'></stop>
-                    </lineargradient>
-                </defs>
-                <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
-            M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
-            C22.545,2,26,5.541,26,9.909V23.091z">
-                </path>
-                <polygon class="nav_arrow" fill="#F3F6F9" points="15.044,22.222 16.377,20.888 12.374,16.885 16.377,12.882 15.044,11.55 9.708,16.885 11.04,18.219
-            11.042,18.219 ">
-                </polygon>
-            </svg>
-        </div>
-
-        <div class="home_slider_nav home_slider_next">
-            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="33px" viewbox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
-                <defs>
-                    <lineargradient id='home_grad_next'>
-                        <stop offset='0%' stop-color='#fa9e1b'></stop>
-                        <stop offset='100%' stop-color='#8d4fff'></stop>
-                    </lineargradient>
-                </defs>
-                <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
-        M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
-        C22.545,2,26,5.541,26,9.909V23.091z">
-                </path>
-                <polygon class="nav_arrow" fill="#F3F6F9" points="13.044,11.551 11.71,12.885 15.714,16.888 11.71,20.891 13.044,22.224 18.379,16.888 17.048,15.554
-        17.046,15.554 ">
-                </polygon>
-            </svg>
-        </div>
-
-        <div class="home_slider_dots">
-            <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
-                <li class="home_slider_custom_dot active">
-                    <div></div>01.
-                </li>
-                <li class="home_slider_custom_dot">
-                    <div></div>02.
-                </li>
-                <li class="home_slider_custom_dot">
-                    <div></div>03.
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="search">
-
-    <div class="container fill_height">
-        <div class="row fill_height">
-            <div class="col fill_height">
-
-                <div class="search_tabs_container">
-                    <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-                        <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                            <img src="{{asset('asset/images/suitcase.png')}}" alt=""><span>hotels</span>
-                        </div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                            <img src="{{asset('asset/images/bus.png')}}" alt="">car rentals
-                        </div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                            <img src="{{asset('asset/images/departure.png')}}" alt="">flights
-                        </div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                            <img src="{{asset('asset/images/island.png')}}" alt="">trips
-                        </div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                            <img src="{{asset('asset/images/cruise.png')}}" alt="">cruises
-                        </div>
-                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-                            <img src="{{asset('asset/images/diving.png')}}" alt="">activities
-                        </div>
-                    </div>
-                </div>
-
-                <div class="search_panel active">
-                    <form action="{{route('home')}}" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start" method="post">
-                        @csrf
-                        <div class="search_item">
-                            <div>destination</div>
-                            <select class=" destination search_input" aria-label="Default select example" name="destination" id="destination">
-                                <option selected>Select City</option>
-                                @foreach ( $cities as $city)
-                                <option value="{{$city->id}}" @isset($filter->destination)@selected($filter->destination == $city->id)@endisset>{{$city->city_name ??''}}</option>
-                                @endforeach
+    <!-- form main starts -->
+    <div class="form-main">
+        <div class="container-fluid">
+            <div class="form-content">
+                <form action="{{ url('/') }}" id="myForm">
+                <h3 class="form-title text-center d-inline white">Find a Places</h3>
+                <div class="d-lg-flex align-items-center justify-content-between">
+                    <div class="form-group pr-4 m-0">
+                        <div class="input-box">
+                            <i class="fa fa-map-marker"></i>
+                            <select class="niceSelect" name="destination">
+                               @foreach ($cities as $c)
+                                   <option value="{{ $c->id }}">{{ $c->city_name }} {{ $c->id }}</option>
+                               @endforeach
                             </select>
                         </div>
-                        <div class="search_item">
-                            <div>check in</div>
-                            <input type="date" class="check_in search_input" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="form-group pr-4 m-0">
+                        <div class="input-box">
+                            <i class="fa fa-calendar"></i>
+                            <input id="date-range0" type="text" name="range0" placeholder="Depart Date">
                         </div>
-                        <div class="search_item">
-                            <div>check out</div>
-                            <input type="date" class="check_out search_input" placeholder="YYYY-MM-DD">
+                    </div>
+
+                    <div class="form-group pr-4 m-0">
+                        <div class="input-box">
+                            <i class="fa fa-calendar"></i>
+                            <input id="date-range1" type="text" name="range1" placeholder="Return Date">
                         </div>
-                        <div class="search_item">
-                            <div>Day</div>
-                            <select name="day" id="adults_1" class="dropdown_item_select search_input">
-                                <option selected disabled>Select Day</option>
-                                @for($i=1;$i<11;$i++) <option value="{{$i}}" @isset($filter->day)@selected($filter->day == $i)@endisset()>{{$i ??''}}</option>
-                                    @endfor
+                    </div>
+
+                    <div class="form-group pr-4 m-0">
+                        <div class="input-box">
+                            <i class="fa fa-clock"></i>
+                            <select class="niceSelect" name="day">
+                                <option value="">Total Duration</option>
+                               @foreach ($days as $day)
+                                   <option value="{{ $day->days  }}">{{ $day->days }}</option>
+                               @endforeach
                             </select>
                         </div>
-                        <button type="submit" class="button search_button">search<span></span><span></span></button>
+                    </div>
 
-                        <a href="{{route('home')}}" class="button search_button">Clear filter<span></span><span></span><span></span></a>
-
-                    </form>
-
+                    <div class="form-group m-0 w-100">
+                        <button type="submit" class="nir-btn" onclick="myFunction()"><i class="fa fa-search"></i> Check Availability</button>
+                    </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
-</div>
+    <!-- form main ends -->
 
-<!-- <div class="intro">
+    <!-- why us starts -->
+    <section class="featured-us pb-0">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="intro_title text-center">We have the best tours</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="intro_text text-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse
-                            potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row intro_items">
-
-                <div class="col-lg-4 intro_col">
-                    <div class="intro_item">
-                        <div class="intro_item_overlay"></div>
-
-                        <div class="intro_item_background" style="background-image:url({{asset('asset/images/intro_1.jpg')}})"></div>
-                        <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="intro_date">May 25th - June 01st</div>
-                            <div class="button intro_button">
-                                <div class="button_bcg"></div><a href="#">see
-                                    more<span></span><span></span><span></span></a>
+            <div class="featured-us-box pt-9">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="featured-us-item d-sm-flex align-items-center justify-content-between">
+                            <div class="featured-us-icon">
+                                <i class="flaticon-price pink"></i>
                             </div>
-                            <div class="intro_center text-center">
-                                <h1>Mauritius</h1>
-                                <div class="intro_price">From $1450</div>
-                                <div class="rating rating_4">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                            <div class="featured-us-content">
+                                <h4 class="mb-1"><a href="#">Competetive Pricing</a></h4>
+                                <p class="mb-0">With 500+ suppliers and the purchasing power of 300 million members
+                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 intro_col">
-                    <div class="intro_item">
-                        <div class="intro_item_overlay"></div>
-
-                        <div class="intro_item_background" style="background-image:url({{asset('asset/images/intro_2.jpg')}})"></div>
-                        <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="intro_date">May 25th - June 01st</div>
-                            <div class="button intro_button">
-                                <div class="button_bcg"></div><a href="#">see
-                                    more<span></span><span></span><span></span></a>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="featured-us-item d-sm-flex align-items-center justify-content-between">
+                            <div class="featured-us-icon">
+                                <i class="flaticon-quality pink"></i>
                             </div>
-                            <div class="intro_center text-center">
-                                <h1>Greece</h1>
-                                <div class="intro_price">From $1450</div>
-                                <div class="rating rating_4">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                            <div class="featured-us-content">
+                                <h4 class="mb-1"><a href="#">Award Winning Service</a></h4>
+                                <p class="mb-0">Fabulous Travel worry free knowing that we're here if you need us, 24
+                                    hours a day</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 intro_col">
-                    <div class="intro_item">
-                        <div class="intro_item_overlay"></div>
-
-                        <div class="intro_item_background" style="background-image:url({{asset('asset/images/intro_3.jpg')}})"></div>
-                        <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="intro_date">May 25th - June 01st</div>
-                            <div class="button intro_button">
-                                <div class="button_bcg"></div><a href="#">see
-                                    more<span></span><span></span><span></span></a>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="featured-us-item d-sm-flex align-items-center justify-content-between">
+                            <div class="featured-us-icon">
+                                <i class="flaticon-global pink"></i>
                             </div>
-                            <div class="intro_center text-center">
-                                <h1>Scotland</h1>
-                                <div class="intro_price">From $1450</div>
-                                <div class="rating rating_4">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
+                            <div class="featured-us-content">
+                                <h4 class="mb-1"><a href="#">Worldwide Coverage</a></h4>
+                                <p class="mb-0">1,200,000 hotels in more than 200 countries and regions & flights to
+                                    over 5,000 citites.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </section>
+    <!-- why us ends -->
 
-<!-- <div class="cta">
-
-    <div class="cta_background" style="background-image:url({{asset('asset/images/cta.jpg')}})"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-
-                <div class="cta_slider_container">
-                    <div class="owl-carousel owl-theme cta_slider">
-
-                        <div class="owl-item cta_item text-center">
-                            <div class="cta_title">maldives deluxe package</div>
-                            <div class="rating_r rating_r_4">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </div>
-                            <p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
-                                convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit
-                                nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor
-                                augue gravida lectus, et efficitur enim justo vel ligula.</p>
-                            <div class="button cta_button">
-                                <div class="button_bcg"></div><a href="#">book
-                                    now<span></span><span></span><span></span></a>
-                            </div>
-                        </div>
-
-                        <div class="owl-item cta_item text-center">
-                            <div class="cta_title">maldives deluxe package</div>
-                            <div class="rating_r rating_r_4">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </div>
-                            <p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
-                                convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit
-                                nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor
-                                augue gravida lectus, et efficitur enim justo vel ligula.</p>
-                            <div class="button cta_button">
-                                <div class="button_bcg"></div><a href="#">book
-                                    now<span></span><span></span><span></span></a>
-                            </div>
-                        </div>
-
-                        <div class="owl-item cta_item text-center">
-                            <div class="cta_title">maldives deluxe package</div>
-                            <div class="rating_r rating_r_4">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </div>
-                            <p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
-                                convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit
-                                nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor
-                                augue gravida lectus, et efficitur enim justo vel ligula.</p>
-                            <div class="button cta_button">
-                                <div class="button_bcg"></div><a href="#">book
-                                    now<span></span><span></span><span></span></a>
+    <!-- about-us starts -->
+    <section class="about-us pb-0 pt-6">
+        <div class="container">
+            <div class="about-image-box">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-lg-6 col-sm-12 mb-4">
+                        <div class="about-content">
+                            <h4 class="mb-1 blue font-weight-normal">About Plan Rajasthan Trip</h4>
+                            <h2>We're truely dedicated to make your travel experience best</h2>
+                            <p class="mb-3">Top Tour Operators and Travel Agency. We offering in total 793 tours and
+                                holidays throughout the world. Combined we have received 1532 customer reviews and an
+                                average rating of 5 out of 5 stars. <br><br>Travel has helped us to understand the
+                                meaning of life and it has helped us become better people. Each time we travel, we see
+                                the world with new eyes.</p>
+                            <div class="about-imagelist">
+                                <ul class="d-flex justify-content-between">
+                                    <li class="mr-2">
+                                        <img src="{{ asset('images/destination7.jpg') }}" alt="">
+                                    </li>
+                                    <li class="mr-2">
+                                        <img src="{{ asset('images/destination5.jpg') }}" alt="">
+                                    </li>
+                                    <li class="mr-2">
+                                        <img src="{{ asset('images/destination6.jpg') }}" alt="">
+                                    </li>
+                                    <li class="mr-2">
+                                        <img src="{{ asset('images/destination3.jpg') }}" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="{{ asset('images/destination4.jpg') }}" alt="">
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    <div class="cta_slider_nav cta_slider_prev">
-                        <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="33px" viewbox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
-                            <defs>
-                                <lineargradient id='cta_grad_prev'>
-                                    <stop offset='0%' stop-color='#fa9e1b'></stop>
-                                    <stop offset='100%' stop-color='#8d4fff'></stop>
-                                </lineargradient>
-                            </defs>
-                            <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
-                        M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
-                        C22.545,2,26,5.541,26,9.909V23.091z">
-                            </path>
-                            <polygon class="nav_arrow" fill="#F3F6F9" points="15.044,22.222 16.377,20.888 12.374,16.885 16.377,12.882 15.044,11.55 9.708,16.885 11.04,18.219
-                        11.042,18.219 ">
-                            </polygon>
-                        </svg>
-                    </div>
-
-                    <div class="cta_slider_nav cta_slider_next">
-                        <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="33px" viewbox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
-                            <defs>
-                                <lineargradient id='cta_grad_next'>
-                                    <stop offset='0%' stop-color='#fa9e1b'></stop>
-                                    <stop offset='100%' stop-color='#8d4fff'></stop>
-                                </lineargradient>
-                            </defs>
-                            <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
-                    M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
-                    C22.545,2,26,5.541,26,9.909V23.091z">
-                            </path>
-                            <polygon class="nav_arrow" fill="#F3F6F9" points="13.044,11.551 11.71,12.885 15.714,16.888 11.71,20.891 13.044,22.224 18.379,16.888 17.048,15.554
-                    17.046,15.554 ">
-                            </polygon>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<div class="offers">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="section_title">the best offers with rooms</h2>
-            </div>
-        </div>
-        <div class="row offers_items">
-
-            @foreach ($datas as $data)
-
-            <div class="col-lg-6 offers_col">
-                <div class="offers_item">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="offers_image_container">
-
-                                <div class="offers_image_background" style="background-image:url({{asset($data->packageimage[0]->image ??'')}})">
-                                </div>
-                                <div class="offer_name"><a href="{{route('singlePackage',$data->id)}}">{{$data->package_name ??''}}</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="offers_content">
-                                <div class="offers_price"> ₹{{$data->total_price ??''}}<span>{{$data->duration ??''}}</span></div>
-                                <div class="rating_r rating_r_4 offers_rating">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </div>
-                                <p class="offers_text">{!!$data->short_desc ??''!!}</p>
-                                <div class="offers_icons">
-                                    <ul class="offers_icons_list">
-                                        <li class="offers_icons_item"><img src="{{asset('asset/images/post.png')}}" alt=""></li>
-                                        <li class="offers_icons_item"><img src="{{asset('asset/images/compass.png')}}" alt="">
-                                        </li>
-                                        <li class="offers_icons_item"><img src="{{asset('asset/images/bicycle.png')}}" alt="">
-                                        </li>
-                                        <li class="offers_icons_item"><img src="{{asset('asset/images/sailboat.png')}}" alt="">
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="offers_link"><a href="{{route('singlePackage',$data->id)}}">read more</a></div>
-                            </div>
+                    <div class="col-lg-6 col-sm-12 mb-4">
+                        <div class="about-image">
+                            <img src="https://img.freepik.com/free-photo/india-gate-mornings_181624-17306.jpg?w=2000&t=st=1669532849~exp=1669533449~hmac=958dab84ceabbfdf8c71cc978a416421315775204c01b8ec5744eed1365e01cb"
+                                alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            @endforeach
-        </div>
-    </div>
-</div>
 
-<div class="testimonials">
-    <div class="test_border"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="section_title">what our clients say about us</h2>
+        </div>
+    </section>
+    <!-- about-us ends -->
+
+    <!-- Trending Starts -->
+    <section class="trending pb-6 pt-5">
+        <div class="container">
+            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0">Perfect <span>Tour Packages</span></h2>
+                <p class="mb-0">Travel has helped us to understand the meaning of life and it has helped us become
+                    better people. Each time we travel, we see the world with new eyes.</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-
-                <div class="test_slider_container">
-                    <div class="owl-carousel owl-theme test_slider">
-
-                        <div class="owl-item">
-                            <div class="test_item">
-                                <div class="test_image"><img src="{{asset('asset/images/test_1.jpg')}}" alt="https://unsplash.com/@anniegray"></div>
-                                <div class="test_icon"><img src="{{asset('asset/images/backpack.png')}}" alt=""></div>
-                                <div class="test_content_container">
-                                    <div class="test_content">
-                                        <div class="test_item_info">
-                                            <div class="test_name">carla smith</div>
-                                            <div class="test_date">May 24, 2017</div>
-                                        </div>
-                                        <div class="test_quote_title">" Best holliday ever "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In
-                                            faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
-                                    </div>
+            <div class="trend-box">
+                <div class="row">
+                    @foreach ($datas as $data)
+                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                        <div class="trend-item">
+                            <div class="trend-image">
+                                <img src="https://img.freepik.com/free-photo/udaipur-city-view-from-hotel-balcony-rajasthan-india_53876-65505.jpg?w=2000&t=st=1669533247~exp=1669533847~hmac=969873ad3d77d8952f2eb85f3b0a1eb178609de906829dee7c1adf16e8c76db8"
+                                    alt="image">
+                                <div class="trend-tags">
+                                    <a href="#"><i class="flaticon-like"></i></a>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="owl-item">
-                            <div class="test_item">
-                                <div class="test_image"><img src="{{asset('asset/images/test_2.jpg')}}" alt="https://unsplash.com/@tschax"></div>
-                                <div class="test_icon"><img src="{{asset('asset/images/island_t.png')}}" alt=""></div>
-                                <div class="test_content_container">
-                                    <div class="test_content">
-                                        <div class="test_item_info">
-                                            <div class="test_name">carla smith</div>
-                                            <div class="test_date">May 24, 2017</div>
+                            <div class="trend-content-main">
+                                <div class="trend-content">
+                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i>
+                                    </h6>
+                                    <h4><a href="{{ route('singlePackage',$data->id) }}">{{ $data->package_name }}</a></h4>
+                                    <div class="rating-main d-flex align-items-center">
+                                        <div class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
                                         </div>
-                                        <div class="test_quote_title">" Best holliday ever "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In
-                                            faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+                                        <span class="ml-2">38 Reviews</span>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="owl-item">
-                            <div class="test_item">
-                                <div class="test_image"><img src="{{asset('asset/images/test_3.jpg')}}" alt="https://unsplash.com/@seefromthesky"></div>
-                                <div class="test_icon"><img src="{{asset('asset/images/kayak.png')}}" alt=""></div>
-                                <div class="test_content_container">
-                                    <div class="test_content">
-                                        <div class="test_item_info">
-                                            <div class="test_name">carla smith</div>
-                                            <div class="test_date">May 24, 2017</div>
+                                <div class="trend-last-main">
+                                    <p class="mb-0 trend-para">
+                                        {!! $data->short_desc !!}
+                                    </p>
+                                    <div class="trend-last d-flex align-items-center justify-content-between">
+                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $data->duration }}</p>
+                                        <div class="trend-price">
+                                            <p class="price white mb-0">From <span>&#8377; {{ number_format($data->total_price,2) }}</span></p>
                                         </div>
-                                        <div class="test_quote_title">" Best holliday ever "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In
-                                            faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="owl-item">
-                            <div class="test_item">
-                                <div class="test_image"><img src="{{asset('asset/images/test_2.jpg')}}" alt=""></div>
-                                <div class="test_icon"><img src="{{asset('asset/images/island_t.png')}}" alt=""></div>
-                                <div class="test_content_container">
-                                    <div class="test_content">
-                                        <div class="test_item_info">
-                                            <div class="test_name">carla smith</div>
-                                            <div class="test_date">May 24, 2017</div>
-                                        </div>
-                                        <div class="test_quote_title">" Best holliday ever "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In
-                                            faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="owl-item">
-                            <div class="test_item">
-                                <div class="test_image"><img src="{{asset('asset/images/test_1.jpg')}}" alt=""></div>
-                                <div class="test_icon"><img src="{{asset('asset/images/backpack.png')}}" alt=""></div>
-                                <div class="test_content_container">
-                                    <div class="test_content">
-                                        <div class="test_item_info">
-                                            <div class="test_name">carla smith</div>
-                                            <div class="test_date">May 24, 2017</div>
-                                        </div>
-                                        <div class="test_quote_title">" Best holliday ever "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In
-                                            faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="owl-item">
-                            <div class="test_item">
-                                <div class="test_image"><img src="{{asset('asset/images/test_3.jpg')}}" alt=""></div>
-                                <div class="test_icon"><img src="{{asset('asset/images/kayak.png')}}" alt=""></div>
-                                <div class="test_content_container">
-                                    <div class="test_content">
-                                        <div class="test_item_info">
-                                            <div class="test_name">carla smith</div>
-                                            <div class="test_date">May 24, 2017</div>
-                                        </div>
-                                        <div class="test_quote_title">" Best holliday ever "</div>
-                                        <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In
-                                            faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                 
+                    @endforeach
+                  
+                </div>
+               
+            </div>
+            {{ $datas->links('pagination::bootstrap-4') }}
+        </div>
+    </section>
+    <!-- Trending Ends -->
 
-                    <div class="test_slider_nav test_slider_prev">
-                        <svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="33px" viewbox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
-                            <defs>
-                                <lineargradient id='test_grad_prev'>
-                                    <stop offset='0%' stop-color='#fa9e1b'></stop>
-                                    <stop offset='100%' stop-color='#8d4fff'></stop>
-                                </lineargradient>
-                            </defs>
-                            <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
-                        M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
-                        C22.545,2,26,5.541,26,9.909V23.091z">
-                            </path>
-                            <polygon class="nav_arrow" fill="#F3F6F9" points="15.044,22.222 16.377,20.888 12.374,16.885 16.377,12.882 15.044,11.55 9.708,16.885 11.04,18.219
-                        11.042,18.219 ">
-                            </polygon>
-                        </svg>
+    <!-- top destination starts -->
+    <section class="top-destination overflow-hidden pb-9">
+        <div class="container">
+            <div class="desti-inner">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-4 col-md-6 p-1">
+                        <div class="desti-title text-center">
+                            <h2 class="white">Travel <br>Best Holidays Trips <br>In The World</h2>
+                            <p class="white mb-0">Lorem Ipsum is simply dummy text the printing and typesetting
+                                industry.</p>
+                        </div>
                     </div>
-
-                    <div class="test_slider_nav test_slider_next">
-                        <svg version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="33px" viewbox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
-                            <defs>
-                                <lineargradient id='test_grad_next'>
-                                    <stop offset='0%' stop-color='#fa9e1b'></stop>
-                                    <stop offset='100%' stop-color='#8d4fff'></stop>
-                                </lineargradient>
-                            </defs>
-                            <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
-                    M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
-                    C22.545,2,26,5.541,26,9.909V23.091z">
-                            </path>
-                            <polygon class="nav_arrow" fill="#F3F6F9" points="13.044,11.551 11.71,12.885 15.714,16.888 11.71,20.891 13.044,22.224 18.379,16.888 17.048,15.554
-                    17.046,15.554 ">
-                            </polygon>
-                        </svg>
+                    <div class="col-lg-4 col-md-6 p-1">
+                        <div class="desti-image">
+                            <img src="https://img.freepik.com/free-photo/beautiful-view-empire-states-skyscrapers-new-york-city_181624-6295.jpg?w=2000&t=st=1669533378~exp=1669533978~hmac=3e05cfa6316f4b4347f631f2d845c5b7510d340b1d06f552b435f78519e18863"
+                                alt="desti">
+                            <div class="desti-content">
+                                <div class="rating mb-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <h4 class="white mb-0">New York Tour</h4>
+                            </div>
+                            <div class="desti-overlay">
+                                <a href="#" class="nir-btn">
+                                    <span class="white">Book Now</span>
+                                    <i class="fa fa-arrow-right white pl-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-1">
+                        <div class="desti-image">
+                            <img src="https://img.freepik.com/free-photo/armenian-monastery-landscape_181624-29387.jpg?w=2000&t=st=1669533451~exp=1669534051~hmac=37c39cca23be0e1409a10cf0da077c5f8cd7567532720398a0b7543d2381956f"
+                                alt="desti">
+                            <div class="desti-content">
+                                <div class="rating mb-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <h4 class="white mb-0">Armania Tour</h4>
+                            </div>
+                            <div class="desti-overlay">
+                                <a href="#" class="nir-btn">
+                                    <span class="white">Book Now</span>
+                                    <i class="fa fa-arrow-right white pl-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-1">
+                        <div class="desti-image">
+                            <img src="https://img.freepik.com/free-photo/tower-bridge-london-uk_268835-1403.jpg?w=2000&t=st=1669533470~exp=1669534070~hmac=8dcff2ebe07cf2dcfef53be667f6568eff9cd2b6b3b2db5e258b3c17a4eea1b2"
+                                alt="desti">
+                            <div class="desti-content">
+                                <div class="rating mb-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <h4 class="white mb-0">Manchester Tour</h4>
+                            </div>
+                            <div class="desti-overlay">
+                                <a href="#" class="nir-btn">
+                                    <span class="white">Book Now</span>
+                                    <i class="fa fa-arrow-right white pl-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-1">
+                        <div class="desti-image">
+                            <img src="https://img.freepik.com/free-photo/sunrise-dal-lake-kashmir-india_1232-4765.jpg?w=1800&t=st=1669533491~exp=1669534091~hmac=dafef4234f343d240132196b619144e4b00979336b938474c6bbef2fcc82aa00"
+                                alt="desti">
+                            <div class="desti-content">
+                                <div class="rating mb-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <h4 class="white mb-0">kathmandu Tour</h4>
+                            </div>
+                            <div class="desti-overlay">
+                                <a href="#" class="nir-btn">
+                                    <span class="white">Book Now</span>
+                                    <i class="fa fa-arrow-right white pl-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-1">
+                        <div class="desti-image">
+                            <img src="https://img.freepik.com/free-photo/confluence-indus-zanskar-rivers-leh-ladakh-india_1150-11112.jpg?w=2000&t=st=1669533506~exp=1669534106~hmac=da2a6e2dd9a11fa299c72b3d2db3650c58828b39440cd277afeb9ebd4a576728"
+                                alt="desti">
+                            <div class="desti-content">
+                                <div class="rating mb-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <h4 class="white mb-0">Tokyo Tour</h4>
+                            </div>
+                            <div class="desti-overlay">
+                                <a href="#" class="nir-btn">
+                                    <span class="white">Book Now</span>
+                                    <i class="fa fa-arrow-right white pl-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 p-1">
+                        <div class="desti-image">
+                            <img src="https://img.freepik.com/premium-photo/gate-india-famous-monument-new-delhi_400112-203.jpg?w=2000"
+                                alt="desti">
+                            <div class="desti-content">
+                                <div class="rating mb-1">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <h4 class="white mb-0">Norwich Tour</h4>
+                            </div>
+                            <div class="desti-overlay">
+                                <a href="#" class="nir-btn">
+                                    <span class="white">Book Now</span>
+                                    <i class="fa fa-arrow-right white pl-1"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- <div class="trending">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="section_title">trending now</h2>
-            </div>
-        </div>
-        <div class="row trending_container">
+        <div id="particles-js"></div>
+    </section>
+    <!-- top destination ends -->
 
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_1.png')}}" alt="https://unsplash.com/@fransaraco">
+    <!-- Discount action starts -->
+    <section class="discount-action pt-0">
+        <div class="container">
+            <div class="call-banner">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6 col-md-6 p-0">
+                        <div class="call-banner-inner text-center bg-navy">
+                            <h4 class="white">SUMMER SPECIAL UPTO 25% OFF</h4>
+                            <h2 class="white mb-4">SPEND THE BEST VACATION WITH US <br>The nights of Thailand</h2>
+                            <a href="#" class="nir-btn">View Details <i
+                                    class="fa fa-arrow-right white pl-1"></i></a>
+                        </div>
                     </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">grand hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_2.png')}}" alt="https://unsplash.com/@grovemade">
-                    </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_3.png')}}" alt="https://unsplash.com/@jbriscoe">
-                    </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">queen hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_4.png')}}" alt="https://unsplash.com/@oowgnuj">
-                    </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_5.png')}}" alt="https://unsplash.com/@mindaugas">
-                    </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">grand hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_6.png')}}" alt="https://unsplash.com/@itsnwa">
-                    </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_7.png')}}" alt="https://unsplash.com/@rktkn">
-                    </div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">queen hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="trending_item clearfix">
-                    <div class="trending_image"><img src="{{asset('asset/images/trend_8.png')}}" alt="https://unsplash.com/@thoughtcatalog"></div>
-                    <div class="trending_content">
-                        <div class="trending_title"><a href="#">mars hotel</a></div>
-                        <div class="trending_price">From $182</div>
-                        <div class="trending_location">madrid, spain</div>
-                    </div>
+                    <div class="col-lg-6 col-md-6 p-0"></div>
                 </div>
             </div>
         </div>
-    </div>
-</div> -->
-<div class="contact">
-    <div class="contact_background" style="background-image:url({{asset('asset/images/contact.png')}})"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="contact_image">
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="contact_form_container">
-                    <div class="contact_title">get in touch</div>
-                    <form action="#" id="contact_form" class="contact_form">
-                        <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
-                        <input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
-                        <input type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
-                        <textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-                        <button type="submit" id="form_submit_button" class="form_submit_button button">send
-                            message<span></span><span></span><span></span></button>
-                    </form>
+    </section>
+    <!-- Discount action Ends -->
+
+    <!-- Counter -->
+    <section class="counter-main pt-0 pb-6">
+        <div class="container">
+            <div class="counter text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4">
+                        <div class="counter-item bg-pink">
+                            <i class="fa fa-users white mb-1"></i>
+                            <h3 class="value mb-0 white">100</h3>
+                            <h4 class="m-0 white">Happy Customers</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4">
+                        <div class="counter-item bg-pink">
+                            <i class="fa fa-plane white mb-1"></i>
+                            <h3 class="value mb-0 white">50</h3>
+                            <h4 class="m-0 white">Amazing Tours </h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12mb-4">
+                        <div class="counter-item bg-pink">
+                            <i class="fa fa-chart-bar white mb-1"></i>
+                            <h3 class="value mb-0 white">3472</h3>
+                            <h4 class="m-0 white">In Business</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4">
+                        <div class="counter-item bg-pink">
+                            <i class="fa fa-support white mb-1"></i>
+                            <h3 class="value mb-0 white">523</h3>
+                            <h4 class="m-0 white">Support Cases </h4>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+    <!-- End Counter -->
+
+    <!-- Fav destination Starts -->
+    <section class="trending destination pb-6 pt-9"
+        style="background-image:
+             url('https://img.freepik.com/free-photo/hawa-mahal-palace-jaipur-india_53876-31311.jpg?w=2000&t=st=1669533920~exp=1669534520~hmac=fb9d53b229ee866fea8a24fc96075083958d778de65e4d1b65a2062203a223d2');">
+        <div class="container">
+            <div class="section-title section-title-w text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0 white">Find Your <strong>Favourite Destination</strong></h2>
+                <p class="mb-0 white">Travel has helped us to understand the meaning of life and it has helped us
+                    become
+                    better people. Each time we travel, we see the world with new eyes.</p>
+            </div>
+            <div class="trend-box">
+                <div class="price-navtab text-center mb-4">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#historical">Historical</a></li>
+                        <li><a data-toggle="tab" href="#weekend">Weekend</a></li>
+                        <li><a data-toggle="tab" href="#holidays">Holidays</a></li>
+                        <li><a data-toggle="tab" href="#special">Special Tour</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="historical" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending8.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Nepal Special Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 852 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Nepal.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending11.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Canada New Year Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 615 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Canada.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/2.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-12 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending12.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">25 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">America Christmas Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 926 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> America.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="weekend" class="tab-pane fade">
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending14.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Nepal Weekend Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 852 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Nepal.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/reviewer/1.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending13.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Canada Weekend Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 615 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Canada.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/reviewer/2.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-12 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending7.jpg') }} " alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">25 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">America Weekend Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 926 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> America.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="holidays" class="tab-pane fade">
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending2.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Nepal Holidays Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 852 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Nepal.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending3.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Canada Holidays Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 615 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Canada.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/reviewer/2.jpg') }}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-12 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending4.jpg') }}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">25 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">America Holidays Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 926 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> America.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg')}} " class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="special" class="tab-pane fade">
+                        <div class="row">
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending6.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Nepal Special Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 852 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Nepal.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg')}}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending5.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">38 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">Canada Special Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 615 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> Canada.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/2.jpg')}}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 col-md-12 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                        <img src="{{ asset('images/trending9.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span class="ml-2">25 Reviews</span>
+                                            </div>
+                                            <h4><a href="#">America Special Tour</a></h4>
+                                            <p class="mb-0"><i class="fa fa-eye mr-1"></i> 926 Visiting Places <i
+                                                    class="fa fa-map-marker mr-1 ml-3"></i> America.</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <p class="mb-0 trend-para">A wonderful little cottage right on the seashore
+                                                - perfect for exploring.</p>
+                                            <div class="trend-last d-flex align-items-center justify-content-between">
+                                                <p class="mb-0 white d-flex align-items-center"><img
+                                                        src="{{ asset('images/1.jpg')}}" class="d-author mr-2"
+                                                        alt=""> Thu Astudillo</p>
+                                                <div class="trend-price">
+                                                    <p class="price white mb-0"><a href="#"><i
+                                                                class="flaticon-like white"></i></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dot-overlay"></div>
+    </section>
+    <!-- Fav destination Ends -->
+
+    <!-- top deal starts -->
+    <section class="top-deals bg-grey pt-9">
+        <div class="container">
+            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0">Today's <span>Top Deal</span></h2>
+                <p class="mb-0">Travel has helped us to understand the meaning of life and it has helped us become
+                    better people. Each time we travel, we see the world with new eyes.</p>
+            </div>
+            <div class="row team-slider">
+                <div class="col-lg-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/deal1.jpg')}}" alt="image">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> United Kingdom</h6>
+                        <h4><a href="#">Earning Asiana Club Miles</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/deal2.jpg')}}" alt="image">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Thailand</h6>
+                        <h4><a href="#">Save big on hotels!</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/deal3.jpg')}}" alt="image">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> South Korea</h6>
+                        <h4><a href="#">Experience Europe Your Way</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/deal4.jpg')}}" alt="image">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Germany</h6>
+                        <h4><a href="#">Earning Asiana Club Miles</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- top deal ends -->
+
+    <!-- testomonial start -->
+    <section class="testimonial pb-10 pt-9"
+        style="background-image:
+             url('https://img.freepik.com/free-photo/hawa-mahal-palace-jaipur-india_53876-31311.jpg?w=2000&t=st=1669533920~exp=1669534520~hmac=fb9d53b229ee866fea8a24fc96075083958d778de65e4d1b65a2062203a223d2');">
+        <div class="container">
+            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0 white">What <span>People Say About Us</span></h2>
+                <p class="mb-0 white">Travel has helped us to understand the meaning of life and it has helped us
+                    become
+                    better people. Each time we travel, we see the world with new eyes.</p>
+            </div>
+            <div class="row review-slider1">
+                <div class="col-sm-4">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content mb-5">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p class="description mb-0">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                        <div class="author-title d-flex align-items-center">
+                            <a href="#"><img src="{{ asset('images/img1.jpg') }} " alt=""></a>
+                            <div class="author-in ml-3">
+                                <h5 class="m-0 white"> Elison Marks</h5>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content mb-5">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p class="description mb-0">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                        <div class="author-title d-flex align-items-center">
+                            <a href="#"><img src="{{ asset('images/img2.jpg') }}" alt=""></a>
+                            <div class="author-in ml-3">
+                                <h5 class="m-0 white">Jared Erondu</h5>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content mb-5">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p class="description mb-0">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                        <div class="author-title d-flex align-items-center">
+                            <a href="#"><img src="{{ asset('images/img3.jpg')}}" alt=""></a>
+                            <div class="author-in ml-3">
+                                <h5 class="m-0 white">Kelson Kelly</h5>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+    <!-- testimonial ends -->
+
+    <!-- Instagram starts -->
+    <section class="insta-main p-0">
+        <div class="insta-inner">
+            <div class="follow-button">
+                <h5 class="m-0"><a href="#" title="">Follow on Instagram</a></h5>
+            </div>
+            <div class="row attract-slider">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-3.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-4.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-5.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-1.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-7.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-8.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-2.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-6.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="insta-image">
+                        <a href="#"><img src="{{ asset('images/ins-9.jpg')}}" alt="insta"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Instagram ends -->
+
+    <!-- News Starts -->
+    <section class="news pb-2 pt-9">
+        <div class="container">
+            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0"><span>Articles & Travel</span> Guidings</h2>
+                <p class="mb-0 ">Travel has helped us to understand the meaning of life and it has helped us become
+                    better people. Each time we travel, we see the world with new eyes.</p>
+            </div>
+            <div class="news-outer">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-xs-12 mb-4">
+                        <div class="news-item overflow-hidden">
+                            <div class="news-image">
+                                <img src="{{ asset('images/blog1.jpg')}}" alt="image">
+                            </div>
+                            <div class="news-list mt-2 border-b pb-2 mb-2">
+                                <ul>
+                                    <li><a href="single-right.html" class="pr-3"><i
+                                                class="fa fa-calendar pink pr-1"></i> 4th AUg 2020 </a></li>
+                                    <li><a href="single-right.html" class="pr-3"><i
+                                                class="fa fa-comment pink pr-1"></i> 3</a></li>
+                                    <li><a href="single-right.html" class=""><i
+                                                class="fa fa-tag pink pr-1"></i> Tour, Tourism, Travel</a></li>
+                                </ul>
+                            </div>
+                            <div class="news-content mt-2">
+                                <h4 class="pb-2 mb-2 border-b"><a href="single-right.html">The real voyage does not
+                                        consist in seeking new landscapes</a></h4>
+                                <p class="mb-3">Excited him now natural saw passage offices you minuter. At by asked
+                                    being court hopes. Farther so friends am to detract. Forbade concern do private be.
+                                    Offending residence but men engrossed shy. <br><br>One of the programs is Save Our I
+                                    have personally in many of the programs mentioned on this site.</p>
+
+                                <div class="author-img">
+                                    <img src="{{ asset('images/1.jpg')}}" alt="Demo Image">
+                                    <span>By - Jack Well Fardez</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                                <div class="news-item overflow-hidden">
+                                    <div class="news-image">
+                                        <img src="{{ asset('images/blog2.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="news-list mt-2 border-b pb-2 mb-2">
+                                        <ul>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-calendar pink pr-1"></i> 4th AUg 2020
+                                                </a></li>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-comment pink pr-1"></i> 3</a></li>
+                                            <li><a href="single-right.html" class=""><i
+                                                        class="fa fa-tag pink pr-1"></i> Travel</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-content mt-2">
+                                        <h4 class="bordernone mb-0"><a href="single-right.html">Mountains is always
+                                                right destination.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                                <div class="news-item overflow-hidden">
+                                    <div class="news-image">
+                                        <img src="{{ asset('images/blog3.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="news-list mt-2 border-b pb-2 mb-2">
+                                        <ul>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-calendar pink pr-1"></i> 4th AUg 2020
+                                                </a></li>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-comment pink pr-1"></i> 3</a></li>
+                                            <li><a href="single-right.html" class=""><i
+                                                        class="fa fa-tag pink pr-1"></i> Tourism</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-content mt-2">
+                                        <h4 class="bordernone mb-0"><a href="single-right.html">We have not all
+                                                those
+                                                who wander are lost.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                                <div class="news-item overflow-hidden">
+                                    <div class="news-image">
+                                        <img src="{{ asset('images/blog4.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="news-list mt-2 border-b pb-2 mb-2">
+                                        <ul>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-calendar pink pr-1"></i> 4th AUg 2020
+                                                </a></li>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-comment pink pr-1"></i> 3</a></li>
+                                            <li><a href="single-right.html" class=""><i
+                                                        class="fa fa-tag pink pr-1"></i> Tour</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-content mt-2">
+                                        <h4 class="bordernone mb-0"><a href="single-right.html">Here Our's Life is
+                                                either a daring adventure.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                                <div class="news-item overflow-hidden">
+                                    <div class="news-image">
+                                        <img src="{{ asset('images/blog5.jpg')}}" alt="image">
+                                    </div>
+                                    <div class="news-list mt-2 border-b pb-2 mb-2">
+                                        <ul>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-calendar pink pr-1"></i> 4th AUg 2020
+                                                </a></li>
+                                            <li><a href="single-right.html" class="pr-3"><i
+                                                        class="fa fa-comment pink pr-1"></i> 3</a></li>
+                                            <li><a href="single-right.html" class=""><i
+                                                        class="fa fa-tag pink pr-1"></i> Travel</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="news-content mt-2">
+                                        <h4 class="bordernone mb-0"><a href="single-right.html">Take only memories,
+                                                leave only footprints.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News Ends -->
+
 @endSection
+@section('script')
+<script>
+    function myFunction() {
+      document.getElementById("myForm").submit();
+    }
+    </script>
+@endsection

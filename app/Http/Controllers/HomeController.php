@@ -12,15 +12,16 @@ class HomeController extends Controller
     {
         $cities = Cities::where('state_id', 5)->get();
         $datas = TourPackages::query();
+        $days=TourPackages::get()->unique('days')->sortBy('days');
         $filter = (object)$request->all();
-        if (isset($request->destination)) {
+        if (isset($request->destination) and $request->destination!='') {
             $datas->where('start_city', $request->destination)->orWhere('end_city', $request->destination);
         }
-        if (isset($request->day)) {
+        if (isset($request->day) and $request->day!=null) {
             $datas->where('days', $request->day);
         }
-        $datas = $datas->where('status', '1')->get();
-        return view('welcome', compact('datas', 'filter', 'cities'));
+        $datas = $datas->where('status', '1')->latest()->paginate(3);
+        return view('welcome', compact('datas', 'filter', 'cities','days'));
     }
 
     public function singlePackage($id)
