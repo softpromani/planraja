@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\packageDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,7 +87,7 @@ Route::get('/logout', function (Request $request) {
 
 Route::any('/', [HomeController::class, 'home'])->name('home');
 Route::get('package-details/{id}', [HomeController::class, 'singlePackage'])->name('singlePackage');
-
+Route::get('package',[packageDetailController::class,'package_details'])->name('packages');
 Route::get('/about-us', [CommonController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/contact-us', [CommonController::class, 'contactUs'])->name('contactUs');
 

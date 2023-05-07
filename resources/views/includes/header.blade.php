@@ -56,7 +56,7 @@
                                         aria-haspopup="true" aria-expanded="false">Packages <i class="icon-arrow-down"
                                             aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="">Family</a></li>
+                                        <li><a href="{{route('packages')}}">Family</a></li>
                                         <li><a href="">Friends</a></li>
                                     </ul>
                                 </li>

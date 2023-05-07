@@ -227,9 +227,6 @@
                             <div class="trend-image">
                                 <img src="https://img.freepik.com/free-photo/udaipur-city-view-from-hotel-balcony-rajasthan-india_53876-65505.jpg?w=2000&t=st=1669533247~exp=1669533847~hmac=969873ad3d77d8952f2eb85f3b0a1eb178609de906829dee7c1adf16e8c76db8"
                                     alt="image">
-                                <div class="trend-tags">
-                                    <a href="#"><i class="flaticon-like"></i></a>
-                                </div>
                             </div>
                             <div class="trend-content-main">
                                 <div class="trend-content">
@@ -261,11 +258,11 @@
                             </div>
                         </div>
                     </div>
-                 
+
                     @endforeach
-                  
+
                 </div>
-               
+
             </div>
             {{ $datas->links('pagination::bootstrap-4') }}
         </div>
