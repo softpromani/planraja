@@ -5,6 +5,33 @@
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
         crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
+    <style>
+        .timeline {
+            height: auto;
+            width: 100%;
+            border-left: 2px solid rgb(172, 172, 172);
+            position: relative;
+            top: -10px;
+        }
+
+        .timeline:before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            margin-left: -6px;
+            margin-top: -20px;
+            background-color: #0883FF;
+        }
+        .day{
+            position: absolute;
+            left: -55px;
+            font-weight: bold;
+            top: -5px;
+            color:  #0883FF;
+        }
+    </style>
 @endsection
 @section('content')
     <!-- BreadCrumb Starts -->
@@ -78,27 +105,28 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 card">
-                            <h3>Itinerary</h3>
-                            <div class="main-timeline p-3">
+                        <div class="col-md-12 card p-3">
+                            <h3 class="p-4">Itinerary</h3>
+                            <div class="pl-5">
                                 @forelse ($datas->Eternities as $details)
                                     <div class="timeline">
-                                        <a href="#" class="timeline-content">
-                                            <div class="timeline-year">Day {{$loop->index+1??''}}</div>
-                                            <h5 class="title">{{$details->title??''}}-{{$details->city->city_name??''}}</h5>
-                                            <p class="description">
-                                                {!!$details->longdesc??''!!}
+                                        <div class="ml-3 p-4">
+                                            <div class="day">Day {{ $loop->index + 1 ?? '' }}</div>
+                                            <h5>
+                                                {{ $details->title ?? '' }}-{{ $details->city->city_name ?? '' }}
+                                            </h5>
+                                            <p>
+                                                {!! $details->longdesc ?? '' !!}
                                             </p>
-                                            <h6>Hotel-{{$details->hotel->hotel_name??''}}</h6>
-                                        </a>
+                                            <h6>Hotel-{{ $details->hotel->hotel_name ?? '' }}</h6>
+                                            <hr>
+                                        </div>
                                     </div>
                                 @empty
-                                <div class="row">
-                                    <h3>Oop's Not data founded </h3>
-                                </div>
+                                    <div class="row">
+                                        <h3>Oop's Not data founded </h3>
+                                    </div>
                                 @endforelse
-
-
                             </div>
                         </div>
                     </div>
@@ -127,13 +155,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Text input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" id="form6Example3" class="form-control" />
-                                <label class="form-label" for="form6Example3">Company name</label>
-                            </div>
-
                             <!-- Text input -->
                             <div class="form-outline mb-4">
                                 <input type="text" id="form6Example4" class="form-control" />
