@@ -24,12 +24,13 @@
             margin-top: -20px;
             background-color: #0883FF;
         }
-        .day{
+
+        .day {
             position: absolute;
             left: -55px;
             font-weight: bold;
             top: -5px;
-            color:  #0883FF;
+            color: #0883FF;
         }
     </style>
 @endsection
@@ -108,17 +109,19 @@
                         <div class="col-md-12 card p-3">
                             <h3 class="p-4">Itinerary</h3>
                             <div class="pl-5">
-                                @forelse ($datas->Eternities as $details)
+                                @forelse ($datas->Eternities as $key=>$details)
                                     <div class="timeline">
                                         <div class="ml-3 p-4">
                                             <div class="day">Day {{ $loop->index + 1 ?? '' }}</div>
-                                            <h5>
+                                            <h5 class="toggle" data-toggel="v{{$key}}">
                                                 {{ $details->title ?? '' }}-{{ $details->city->city_name ?? '' }}
                                             </h5>
-                                            <p>
-                                                {!! $details->longdesc ?? '' !!}
-                                            </p>
-                                            <h6>Hotel-{{ $details->hotel->hotel_name ?? '' }}</h6>
+                                            <div class="test" id="v{{$key}}">
+                                                <p>
+                                                    {!! $details->longdesc ?? '' !!}
+                                                </p>
+                                                <h6>Hotel-{{ $details->hotel->hotel_name ?? '' }}</h6>
+                                            </div>
                                             <hr>
                                         </div>
                                     </div>

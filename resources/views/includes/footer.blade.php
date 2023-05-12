@@ -128,7 +128,8 @@
                                     <i class="fab fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </li>
-<!--                             <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+<!--
+    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li> -->
                         </ul>
                     </div>
@@ -342,6 +343,16 @@
     <script src="{{ asset('js/custom-swiper.js') }}"></script>
     <script src="{{ asset('js/custom-nav.js') }}"></script>
     <script src="{{ asset('js/custom-date.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('click','.toggle',function(){
+             var vindex = $(this).attr('data-toggel');
+             if(vindex){
+                $('#'+vindex).toggle();
+             }
+            });
+        });
+    </script>
 </body>
 
 </html>
