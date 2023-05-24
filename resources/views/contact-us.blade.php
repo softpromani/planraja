@@ -45,8 +45,8 @@
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div class="info-content pl-4">
-                                    <p class="m-0">445 Mount Eden Road, Mt Eden</p>
-                                    <p class="m-0">Basundhara Chakrapath</p>
+                                    <p class="m-0">B-33, Sen Colony, Railway station</p>
+                                    <p class="m-0"> Jaipur, Rajasthan 302006</p>
                                 </div>
                             </div>
                             <div class="info-item d-flex align-items-center bg-white mb-3">
@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="info-content pl-4">
                                     <p class="m-0">
-                                        <a href="tel:+91-9829034279"> +91-9829034279 </a>
+                                        <a href="tel:+91-9929992212"> +91-9929992212 </a>
                                     </p>
                                 </div>
                             </div>
@@ -64,8 +64,8 @@
                                     <i class="fa fa-envelope"></i>
                                 </div>
                                 <div class="info-content pl-4">
-                                    <p class="m-0">info@Yatriiworld.com</p>
-                                    <p class="m-0">help@Yatriiworld.com</p>
+                                    <p class="m-0">contact@planrajasthantrip.com</p>
+                                    <p class="m-0">www.planrajasthantrip.com</p>
                                 </div>
                             </div>
                         </div>
