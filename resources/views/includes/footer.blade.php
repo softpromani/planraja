@@ -2,7 +2,7 @@
     <div class="cta-horizon bg-blue pt-4 pb-2">
         <div class="container d-md-flex align-items-center justify-content-between">
             <h4 class="mb-2 white">Didn't find the service suite you! Need a custom service?</h4>
-            <a href="#" class="nir-btn-black">Let's talk</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModalScrollable" class="nir-btn-black">plan you trip </a>
         </div>
     </div>
     <!-- cta-horizon Ends -->
@@ -13,18 +13,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-                        <div class="footer-about bg-blue p-4">
+                        <div class="footer-about p-4">
                             <a href="/">
-                                <img src="{{asset('images/icon.png') }}" alt="">
+                                <img src="{{ asset('images/icon.png') }}" alt="">
                             </a>
-                            <p class="mt-3">
-                                In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla
-                                eu mi magna
-                            </p>
+                            {{-- <p class="mt-3">
+                               B-33, Railway Station ,Jaipur, 302006
+                            </p> --}}
                             <ul>
-                                <li><strong>M. No:</strong> <a href="tel:+91-9829034279"> +91-9829034279 </a> </li>
-                                <!-- <li><strong>Location:</strong> Collins Street, sydney, Australia</li> -->
-                                <li><strong>Email:</strong> info@exclusiveindiajourneys.com</li>
+                                <li><strong>M. No:</strong> <a href="tel:+91-9929992212"> +91-9929992212 </a> </li>
+                                 <li><strong>Location:</strong> B-33, Railway Station ,Jaipur, 302006</li>
+                                <li><strong>Email:</strong> <a href="mailto:contact@planrajasthantrip.com">contact@planrajasthantrip.com </a></li>
                                 <li><strong>Website:</strong> www.planrajasthantrip.com</li>
                             </ul>
                         </div>
@@ -33,11 +32,11 @@
                         <div class="footer-links">
                             <h4 class="white">Company</h4>
                             <ul>
-                                <li><a href="about-us">About Us</a></li>
-                                <li><a href="contact-us">Contact Us</a></li>
+                                <li><a href="{{route('aboutUs')}}">About Us</a></li>
+                                <li><a href="{{route('contactUs')}}">Contact Us</a></li>
                                 <!-- <li><a href="#">Delivery Information</a></li> -->
-                                <li><a href="privacy-policy">Privacy Policy</a></li>
-                                <li><a href="terms">Terms &amp; Conditions</a></li>
+                                <li><a href="{{route('privacyPolicy')}}">Privacy Policy</a></li>
+                                <li><a href="{{route('termsOfUse')}}">Terms &amp; Conditions</a></li>
                                 <!-- <li><a href="#">Customer Service</a></li> -->
                                 <!-- <li><a href="#">Return Policy</a></li> -->
                             </ul>
@@ -47,9 +46,9 @@
                         <div class="footer-links">
                             <h4 class="white">Services</h4>
                             <ul>
-                                <li><a href="#">Payment</a></li>
+                                {{-- <li><a href="#">Payment</a></li> --}}
                                 <li><a href="#">Feedback</a></li>
-                                <li><a href="contact-us">Contact us</a></li>
+                                {{-- <li><a href="contact-us">Contact us</a></li> --}}
                                 <li><a href="#">Our Service</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Site map</a></li>
@@ -72,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-payment">
+        {{-- <div class="footer-payment">
             <div class="container">
                 <div class="footer-pay d-md-flex align-items-center justify-content-between pt-2 pb-2">
                     <div class="footer-payment-nav">
@@ -109,7 +108,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="footer-copyright pt-2 pb-2">
             <div class="container">
                 <div class="copyright-inner d-md-flex align-items-center justify-content-between">
@@ -128,7 +127,7 @@
                                     <i class="fab fa-youtube" aria-hidden="true"></i>
                                 </a>
                             </li>
-<!--
+                            <!--
     <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li> -->
                         </ul>
@@ -146,7 +145,7 @@
     <!-- Back to top ends -->
 
     <!-- Register Modal -->
-    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
+    {{-- <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header bordernone p-0">
@@ -180,22 +179,22 @@
                             </div>
                             <div class="form-group mb-0 form-checkbox mt-3">
                                 <input type="checkbox"> By clicking this, you are agree to to<a href="#"
-                                    class=""> our terms of use</a> and <a href="#"
-                                    class="">privacy policy</a> including the use of cookies
+                                    class=""> our terms of use</a> and <a href="#" class="">privacy
+                                    policy</a> including the use of cookies
                             </div>
                         </div>
                         <div class="login-social border-t mt-3 pt-2 mb-3">
                             <p class="mb-2">OR continue with</p>
                             <a href="#" class="btn-facebook"><i class="fab fa-facebook"
                                     aria-hidden="true"></i> Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter"
-                                    aria-hidden="true"></i> Twitter</a>
-                            <a href="#" class="btn-google"><i class="fab fa-google"
-                                    aria-hidden="true"></i> Google</a>
+                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
+                                Twitter</a>
+                            <a href="#" class="btn-google"><i class="fab fa-google" aria-hidden="true"></i>
+                                Google</a>
                         </div>
                         <div class="sign-up">
-                            <p class="m-0">Already have an account? <a href="login.html"
-                                    class="pink">Login</a></p>
+                            <p class="m-0">Already have an account? <a href="login.html" class="pink">Login</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -238,8 +237,8 @@
                             <p class="mb-2">OR continue with</p>
                             <a href="#" class="btn-facebook"><i class="fab fa-facebook"
                                     aria-hidden="true"></i> Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter"
-                                    aria-hidden="true"></i> Twitter</a>
+                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
+                                Twitter</a>
                         </div>
                         <div class="sign-up">
                             <p class="m-0">Do not have an account? <a href="login.html" class="pink">Sign
@@ -249,7 +248,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- header side menu -->
     <div class="header_sidemenu">
@@ -265,7 +264,7 @@
                                 <h5 class="p-3 mb-0 bg-pink white text-caps">My Carts(3 Items)</h5>
                                 <div class="cart-entry d-flex align-items-center p-3">
                                     <a href="#" class="image">
-                                        <img src="{{ asset('images/shop1.jpg')}}" alt="">
+                                        <img src="{{ asset('images/shop1.jpg') }}" alt="">
                                     </a>
                                     <div class="content">
                                         <a href="#" class="title font-weight-bold">Pullover Batwing</a>
@@ -278,7 +277,7 @@
                                 </div>
                                 <div class="cart-entry d-flex align-items-center p-3">
                                     <a href="#" class="image">
-                                        <img src="{{ asset('images/shop2.jpg')}}" alt="">
+                                        <img src="{{ asset('images/shop2.jpg') }}" alt="">
                                     </a>
                                     <div class="content">
                                         <a href="#" class="title font-weight-bold">Pullover Batwing</a>
@@ -291,7 +290,7 @@
                                 </div>
                                 <div class="cart-entry d-flex align-items-center p-3">
                                     <a href="#" class="image">
-                                        <img src="{{ asset('images/shop6.jpg')}}" alt="">
+                                        <img src="{{ asset('images/shop6.jpg') }}" alt="">
                                     </a>
                                     <div class="content">
                                         <a href="#" class="title font-weight-bold">Pullover Batwing</a>
@@ -333,6 +332,84 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header bordernone p-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="login-content p-4">
+                        <div class="login-title section-border">
+                            <h3 class="pink mb-1 text-center">Get Custom Quote</h3>
+                        </div>
+                        <div class="login-form">
+                            <form action="" method="">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Full name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Enter your Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="departerdate">Departure Date</label>
+                                    <input type="date" class="form-control" id="departerdate"
+                                        placeholder="Departure Date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="totalmember">Total Members</label>
+                                    <input type="number" class="form-control" id="totalmember"
+                                        placeholder="Total Members">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number">Contact Number</label>
+                                    <input type="number" class="form-control" id="number"
+                                        placeholder="Contact Number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="days">Number of Days</label>
+                                    <input type="number" class="form-control" id="days"
+                                        placeholder="Number of Days">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Description">Tour Description</label>
+                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary nir-btn">Submit</button>
+                            </form>
+                            <div class="form-group mb-0 form-checkbox mt-3">
+                                <input type="checkbox"> By clicking this, you are agree to to<a href="#"
+                                    class=""> our terms of use</a> and <a href="#" class="">privacy
+                                    policy</a> including the use of cookies
+                            </div>
+                        </div>
+                        <div class="login-social border-t mt-3 pt-2 mb-3">
+                            <p class="mb-2">OR continue with</p>
+                            <a href="#" class="btn-facebook"><i class="fab fa-facebook"
+                                    aria-hidden="true"></i> Facebook</a>
+                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
+                                Twitter</a>
+                            <a href="#" class="btn-google"><i class="fab fa-google" aria-hidden="true"></i>
+                                Google</a>
+                        </div>
+                        <div class="sign-up">
+                            <p class="m-0">Already have an account? <a href="login.html" class="pink">Login</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- *Scripts* -->
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
@@ -344,15 +421,56 @@
     <script src="{{ asset('js/custom-nav.js') }}"></script>
     <script src="{{ asset('js/custom-date.js') }}"></script>
     <script>
-        $(document).ready(function () {
-            $(document).on('click','.toggle',function(){
-             var vindex = $(this).attr('data-toggel');
-             if(vindex){
-                $('#'+vindex).toggle();
-             }
+        $(document).ready(function() {
+            $(document).on('click', '.toggle', function() {
+                var vindex = $(this).attr('data-toggel');
+                if (vindex) {
+                    $('#' + vindex).toggle();
+                }
             });
         });
-    </script>
-</body>
 
-</html>
+
+        // search-box open close js code
+        let navbar = document.querySelector(".navbar");
+        let searchBox = document.querySelector(".search-box .bx-search");
+        // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+        searchBox.addEventListener("click", () => {
+            navbar.classList.toggle("showInput");
+            if (navbar.classList.contains("showInput")) {
+                searchBox.classList.replace("bx-search", "bx-x");
+            } else {
+                searchBox.classList.replace("bx-x", "bx-search");
+            }
+        });
+
+        // sidebar open close js code
+        let navLinks = document.querySelector(".nav-links");
+        let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+        let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+        menuOpenBtn.onclick = function() {
+            navLinks.style.left = "0";
+        }
+        menuCloseBtn.onclick = function() {
+            navLinks.style.left = "-100%";
+        }
+
+
+        // sidebar submenu open close js code
+        let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+        htmlcssArrow.onclick = function() {
+            navLinks.classList.toggle("show1");
+        }
+        let moreArrow = document.querySelector(".more-arrow");
+        moreArrow.onclick = function() {
+            navLinks.classList.toggle("show2");
+        }
+        let jsArrow = document.querySelector(".js-arrow");
+        jsArrow.onclick = function() {
+            navLinks.classList.toggle("show3");
+        }
+    </script>
+    </body>
+
+    </html>

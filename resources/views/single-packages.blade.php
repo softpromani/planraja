@@ -22,15 +22,19 @@
             border-radius: 10px;
             margin-left: -6px;
             margin-top: -20px;
-            background-color: #0883FF;
+            background-color: #162241;
         }
 
         .day {
             position: absolute;
-            left: -55px;
+            left: -65px;
             font-weight: bold;
             top: -5px;
-            color: #0883FF;
+            color: #162241;
+        }
+
+        .right-text {
+            background: #fef9f4;
         }
     </style>
 @endsection
@@ -39,16 +43,17 @@
     <!-- <section class="breadcrumb-main pb-0" style="background-image: {{ url('images/about-2.jpg') }};"> -->
     <section class="breadcrumb-main pb-0" style=" background-image: url('{{ asset('images/about-2.jpg') }}');">
 
-        <div class="breadcrumb-outer pt-10">
+        <div class="breadcrumb-outer pt-10 pb-2">
             <div class="container">
-                <div class="breadcrumb-content d-md-flex align-items-center pt-10">
-                    <h2 class="mb-0">Tour Package Details</h2>
-                    <nav aria-label="breadcrumb">
+                <div class="breadcrumb-content align-items-center pt-10">
+                    <div aria-label="breadcrumb">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Tour Package Details</li>
                         </ul>
-                    </nav>
+                    </div>
+                    <br>
+                    <h2 class="mb-0">Tour Package Details</h2>
                 </div>
             </div>
         </div>
@@ -58,33 +63,33 @@
 
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row right-text" style="height: 400px">
                 <div class="col-md-8">
-                    <div
-                        class="swiffy-slider slider-nav-round slider-nav-visible slider-indicators-round slider-indicators-dark slider-indicators-sm slider-nav-animation">
+                    <div class=" slider-nav-autoplay swiffy-slider slider-nav-round slider-nav-visible slider-indicators-round slider-indicators-dark slider-indicators-sm slider-nav-animation"
+                        data-slider-nav-autoplay-interval="5000">
                         <ul class="slider-container">
                             @foreach ($datas->packageimage as $dt)
-                                <li><img src="{{ asset($dt->image ?? '') }}" style="width: 100%;height: auto;"></li>
+                                <li><img src="{{ asset($dt->image ?? '') }}" style="width: 100%;height:400px"></li>
                             @endforeach
                         </ul>
 
-                        <button type="button" class="slider-nav"></button>
-                        <button type="button" class="slider-nav slider-nav-next"></button>
+                        <div class="slider-nav "></div>
+                        <div class="slider-nav  slider-nav-next"></div>
 
                         <div class="slider-indicators">
-                            <button class="active"></button>
-                            <button></button>
-                            <button></button>
+                            <button class="active focus"></button>
+                            <button class="focus"></button>
+                            <button class="focus"></button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <div class="">
                         <h2 class="card-title" style="color:#000000;">{{ $datas->package_name ?? '' }}</h2>
-                        <p class="card-text mt-3">{{ $datas->duration ?? '' }}</p>
+                        <h3 style="color:#000000;">₹ {{ $datas->total_price ?? '' }}</h3>
+                        <h3 class="card-text mt-3">{{ $datas->duration ?? '' }}</h3>
                         <hr>
                         <p>{!! $datas->short_desc ?? '' !!}</p>
-                        <h3 style="color:#000000;">₹ {{ $datas->total_price ?? '' }}</h3>
                     </div>
                 </div>
             </div>
@@ -97,7 +102,6 @@
                     <div class="row">
                         <div class="col-md-12 mb-3 card">
                             <div class="card-body">
-                                <h3>Overview</h3>
                                 <p>{!! $datas->short_desc ?? '' !!}
                                 </p>
                                 <p>{!! $datas->description ?? '' !!}
@@ -106,21 +110,21 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 card p-3">
+                        <div class="col-md-12 card pl-4 pr-3">
                             <h3 class="p-4">Itinerary</h3>
                             <div class="pl-5">
                                 @forelse ($datas->Eternities as $key=>$details)
                                     <div class="timeline">
-                                        <div class="ml-3 p-4">
-                                            <div class="day">Day {{ $loop->index + 1 ?? '' }}</div>
-                                            <h5 class="toggle" data-toggel="v{{$key}}">
+                                        <div class="ml-1">
+                                            <div class="day">Day{{ $loop->index + 1 ?? '' }}</div>
+                                            <h5 class="toggle" data-toggel="v{{ $key }}">
                                                 {{ $details->title ?? '' }}-{{ $details->city->city_name ?? '' }}
                                             </h5>
-                                            <div class="test" id="v{{$key}}">
+                                            <div class="test" id="v{{ $key }}">
                                                 <p>
                                                     {!! $details->longdesc ?? '' !!}
                                                 </p>
-                                                <h6>Hotel-{{ $details->hotel->hotel_name ?? '' }}</h6>
+                                                <p>Hotel-{{ $details->hotel->hotel_name ?? '' }}</p>
                                             </div>
                                             <hr>
                                         </div>
@@ -138,52 +142,50 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="h1 text-primary text-center"><i class="fas fa-map-marker-alt"></i></h1>
-                            <h3 class="text-black text-center">Fill Enquiry Form Below</h3>
+                            <h3 class="text-black text-center">Get Custom Quote</h3>
                         </div>
                     </div>
                     <div class="row p-2">
-                        <form>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
-                            <div class="row mb-4">
-                                <div class="col">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example1" class="form-control" />
-                                        <label class="form-label" for="form6Example1">First name</label>
-                                    </div>
+                        <div class="col-md-12">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Full name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter Full Name">
                                 </div>
-                                <div class="col">
-                                    <div class="form-outline">
-                                        <input type="text" id="form6Example2" class="form-control" />
-                                        <label class="form-label" for="form6Example2">Last name</label>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Enter your Email">
                                 </div>
-                            </div>
-                            <!-- Text input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" id="form6Example4" class="form-control" />
-                                <label class="form-label" for="form6Example4">Address</label>
-                            </div>
-
-                            <!-- Email input -->
-                            <div class="form-outline mb-4">
-                                <input type="email" id="form6Example5" class="form-control" />
-                                <label class="form-label" for="form6Example5">Email</label>
-                            </div>
-
-                            <!-- Number input -->
-                            <div class="form-outline mb-4">
-                                <input type="number" id="form6Example6" class="form-control" />
-                                <label class="form-label" for="form6Example6">Phone</label>
-                            </div>
-
-                            <!-- Message input -->
-                            <div class="form-outline mb-4">
-                                <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-                                <label class="form-label" for="form6Example7">Additional information</label>
-                            </div>
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
-                        </form>
+                                <div class="form-group">
+                                    <label for="departerdate">Departure Date</label>
+                                    <input type="date" class="form-control" id="departerdate"
+                                        placeholder="Departure Date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="totalmember">Total Members</label>
+                                    <input type="number" class="form-control" id="totalmember"
+                                        placeholder="Total Members">
+                                </div>
+                                <div class="form-group">
+                                    <label for="number">Contact Number</label>
+                                    <input type="number" class="form-control" id="number"
+                                        placeholder="Contact Number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="days">Number of Days</label>
+                                    <input type="number" class="form-control" id="days"
+                                        placeholder="Number of Days">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Description">Tour Description</label>
+                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

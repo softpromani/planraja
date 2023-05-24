@@ -1,5 +1,10 @@
 @extends('layouts.guest')
-
+@section('style')
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+@endsection
 @section('content')
     <!-- banner starts -->
     <section class="banner overflow-hidden">
@@ -9,7 +14,7 @@
                     <div class="swiper-slide">
                         <div class="slide-inner">
                             <div class="slide-image"
-                                style="background-image:url(https://img.freepik.com/free-photo/beautiful-girl-standing-viewpoint-koh-nangyuan-island-near-koh-tao-island-surat-thani-thailand_335224-1094.jpg?w=2000&t=st=1669533750~exp=1669534350~hmac=0b377a254417646489b9f43aaa8d335fc91854f1b81758d39e097e8262d3704d)">
+                                style="background-image:url({{asset('images/hwamahel.png')}});">
                             </div>
                             <div class="swiper-content container">
                                 <h4 class="blue">Amazing Places</h4>
@@ -25,7 +30,7 @@
                     <div class="swiper-slide">
                         <div class="slide-inner">
                             <div class="slide-image"
-                                style="background-image:url(https://img.freepik.com/free-photo/woman-walking-kelingking-beach-nusa-penida-island-bali-indonesia_335224-337.jpg?w=2000&t=st=1669532790~exp=1669533390~hmac=ad4c36d58fa718e907ec3f7ca4d38bbe88429189828d9aec435189a047b925b7g)">
+                                style="background-image:url({{asset('images/jaipur.jpg')}})">
                             </div>
                             <div class="swiper-content container">
                                 <h4 class="blue">Feel Free To Travel</h4>
@@ -41,7 +46,7 @@
                     <div class="swiper-slide">
                         <div class="slide-inner">
                             <div class="slide-image"
-                                style="background-image:url(https://img.freepik.com/free-photo/top-view-hands-holding-smartphone_23-2149617652.jpg?w=2000&t=st=1669532802~exp=1669533402~hmac=eb1b9c1d8c515d41a2a5003caa6c96b6b0cd89f25aa35cebe800352740b105bf)">
+                                style="background-image:url({{asset('images/amber.jpg')}})">
                             </div>
                             <div class="swiper-content container">
                                 <h4 class="blue">Trip For Your Kids</h4>
@@ -65,59 +70,60 @@
 
     <!-- form main starts -->
     <div class="form-main">
-        <div class="container-fluid">
-            <div class="form-content">
+        <div class="container-fluid d-flex justify-content-center border">
+            <div class="form-content border-3">
                 <form action="{{ url('/') }}" id="myForm">
-                <h3 class="form-title text-center d-inline white">Find a Places</h3>
-                <div class="d-lg-flex align-items-center justify-content-between">
-                    <div class="form-group pr-4 m-0">
-                        <div class="input-box">
-                            <i class="fa fa-map-marker"></i>
-                            <select class="niceSelect" name="destination">
-                               @foreach ($cities as $c)
-                                   <option value="{{ $c->id }}">{{ $c->city_name }} {{ $c->id }}</option>
-                               @endforeach
-                            </select>
+                    <h3 class="form-title text-center d-inline white">Find a Places</h3>
+                    <div class="d-lg-flex align-items-center justify-content-between">
+                        <div class="form-group pr-4 m-0">
+                            <div class="input-box">
+                                <i class="fa fa-map-marker"></i>
+                                <select class="niceSelect" name="destination">
+                                    @foreach ($cities as $c)
+                                        <option value="{{ $c->id }}">{{ $c->city_name }} {{ $c->id }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group pr-4 m-0">
-                        <div class="input-box">
-                            <i class="fa fa-calendar"></i>
-                            <input id="date-range0" type="text" name="range0" placeholder="Depart Date">
+                        <div class="form-group pr-4 m-0">
+                            <div class="input-box">
+                                <i class="fa fa-calendar"></i>
+                                <input id="date-range0" type="text" name="range0" placeholder="Depart Date">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group pr-4 m-0">
-                        <div class="input-box">
-                            <i class="fa fa-calendar"></i>
-                            <input id="date-range1" type="text" name="range1" placeholder="Return Date">
+                        <div class="form-group pr-4 m-0">
+                            <div class="input-box">
+                                <i class="fa fa-calendar"></i>
+                                <input id="date-range1" type="text" name="range1" placeholder="Return Date">
+                            </div>
+                        </div>
+
+                        <div class="form-group pr-4 m-0">
+                            <div class="input-box">
+                                <i class="fa fa-clock"></i>
+                                <select class="niceSelect" name="day">
+                                    <option value="">Total Duration</option>
+                                    @foreach ($days as $day)
+                                        <option value="{{ $day->days }}">{{ $day->days }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group m-0 w-100">
+                            <button type="submit" class="nir-btn bg-pink" onclick="myFunction()"><i class="fa fa-search"></i> Check
+                                Availability</button>
                         </div>
                     </div>
-
-                    <div class="form-group pr-4 m-0">
-                        <div class="input-box">
-                            <i class="fa fa-clock"></i>
-                            <select class="niceSelect" name="day">
-                                <option value="">Total Duration</option>
-                               @foreach ($days as $day)
-                                   <option value="{{ $day->days  }}">{{ $day->days }}</option>
-                               @endforeach
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group m-0 w-100">
-                        <button type="submit" class="nir-btn" onclick="myFunction()"><i class="fa fa-search"></i> Check Availability</button>
-                    </div>
-                </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
     <!-- form main ends -->
 
     <!-- why us starts -->
-    <section class="featured-us pb-0">
+    {{-- <section class="featured-us pb-0">
         <div class="container">
             <div class="featured-us-box pt-9">
                 <div class="row">
@@ -160,39 +166,42 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- why us ends -->
 
     <!-- about-us starts -->
-    <section class="about-us pb-0 pt-6">
+    <section class="about-us pb-0 mt-5 pt-6">
         <div class="container">
             <div class="about-image-box">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-lg-6 col-sm-12 mb-4">
                         <div class="about-content">
                             <h4 class="mb-1 blue font-weight-normal">About Plan Rajasthan Trip</h4>
-                            <h2>We're truely dedicated to make your travel experience best</h2>
-                            <p class="mb-3">Top Tour Operators and Travel Agency. We offering in total 793 tours and
-                                holidays throughout the world. Combined we have received 1532 customer reviews and an
-                                average rating of 5 out of 5 stars. <br><br>Travel has helped us to understand the
-                                meaning of life and it has helped us become better people. Each time we travel, we see
-                                the world with new eyes.</p>
+                            <h2>We're truely dedicated to make your travel experience</h2>
+                            <p class="mb-3">At PlanRajasthanTrip, we are committed to making your travel experience the
+                                best it can be. We understand that traveling to a new destination can be both exciting and
+                                overwhelming at the same time. That's why we strive to make your trip as stress-free and
+                                enjoyable as possible. <br><br>Our team of travel experts is dedicated to providing you with
+                                personalized attention and support throughout your journey. From helping you choose the
+                                right travel package to assisting you with transportation and accommodation, we are here to
+                                make sure that every aspect of your trip is taken care of.
+                            </p>
                             <div class="about-imagelist">
                                 <ul class="d-flex justify-content-between">
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/destination7.jpg') }}" alt="">
+                                        <img src="{{ asset('images/th.jpg') }}" alt="">
                                     </li>
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/destination5.jpg') }}" alt="">
+                                        <img src="{{ asset('images/th1.jpg') }}" alt="">
                                     </li>
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/destination6.jpg') }}" alt="">
+                                        <img src="{{ asset('images/th.jpg') }}" alt="">
                                     </li>
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/destination3.jpg') }}" alt="">
+                                        <img src="{{ asset('images/th1.jpg') }}" alt="">
                                     </li>
                                     <li>
-                                        <img src="{{ asset('images/destination4.jpg') }}" alt="">
+                                        <img src="{{ asset('images/th.jpg') }}" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -200,8 +209,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-12 mb-4">
                         <div class="about-image">
-                            <img src="https://img.freepik.com/free-photo/india-gate-mornings_181624-17306.jpg?w=2000&t=st=1669532849~exp=1669533449~hmac=958dab84ceabbfdf8c71cc978a416421315775204c01b8ec5744eed1365e01cb"
-                                alt="">
+                            <img class="img-fluid" src="{{ asset('images/tour.jpg') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -210,7 +218,74 @@
         </div>
     </section>
     <!-- about-us ends -->
+    <!-- top deal starts -->
+    <section class="top-deals bg-grey pt-9">
+        <div class="container">
+            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0">Trending <span>tour packages</span></h2>
+                <p class="mb-0">These trending tour packages offer a glimpse into the diverse facets of Rajasthan, be it
+                    its rich history, stunning landscapes, wildlife, cultural celebrations, or luxurious experiences. Choose
+                    the package that resonates with your interests and embark on an unforgettable journey through the
+                    majestic state of Rajasthan.</p>
+            </div>
+            <div class="row team-slider">
+                <div class="col-lg-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/rj4.jpg') }}" alt="image" height="600px">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> United Kingdom</h6>
+                        <h4><a href="#">Earning Asiana Club Miles</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/rj1.jpg') }}" alt="image" height="600px">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Thailand</h6>
+                        <h4><a href="#">Save big on hotels!</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/plan2.png') }}" alt="image" height="600px">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> South Korea</h6>
+                        <h4><a href="#">Experience Europe Your Way</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 slider-item">
+                    <div class="slider-image">
+                        <img src="{{ asset('images/rj.jpg') }}" alt="image" height="600px">
+                    </div>
+                    <div class="slider-content">
+                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Germany</h6>
+                        <h4><a href="#">Earning Asiana Club Miles</a></h4>
+                        <p>With upto 30% Off, experience Europe your way!</p>
+                        <div class="deal-price">
+                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
+    <!-- top deal ends -->
     <!-- Trending Starts -->
     <section class="trending pb-6 pt-5">
         <div class="container">
@@ -222,43 +297,46 @@
             <div class="trend-box">
                 <div class="row">
                     @foreach ($datas as $data)
-                    <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="trend-item">
-                            <div class="trend-image">
-                                <img src="https://img.freepik.com/free-photo/udaipur-city-view-from-hotel-balcony-rajasthan-india_53876-65505.jpg?w=2000&t=st=1669533247~exp=1669533847~hmac=969873ad3d77d8952f2eb85f3b0a1eb178609de906829dee7c1adf16e8c76db8"
-                                    alt="image">
-                            </div>
-                            <div class="trend-content-main">
-                                <div class="trend-content">
-                                    <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i>
-                                    </h6>
-                                    <h4><a href="{{ route('singlePackage',$data->id) }}">{{ $data->package_name }}</a></h4>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ml-2">38 Reviews</span>
-                                    </div>
+                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                            <div class="trend-item">
+                                <div class="trend-image">
+                                    <img src="https://img.freepik.com/free-photo/udaipur-city-view-from-hotel-balcony-rajasthan-india_53876-65505.jpg?w=2000&t=st=1669533247~exp=1669533847~hmac=969873ad3d77d8952f2eb85f3b0a1eb178609de906829dee7c1adf16e8c76db8"
+                                        alt="image">
                                 </div>
-                                <div class="trend-last-main">
-                                    <p class="mb-0 trend-para">
-                                        {!! $data->short_desc !!}
-                                    </p>
-                                    <div class="trend-last d-flex align-items-center justify-content-between">
-                                        <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $data->duration }}</p>
-                                        <div class="trend-price">
-                                            <p class="price white mb-0">From <span>&#8377; {{ number_format($data->total_price,2) }}</span></p>
+                                <div class="trend-content-main">
+                                    <div class="trend-content">
+                                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i>
+                                        </h6>
+                                        <h4><a
+                                                href="{{ route('singlePackage', $data->id) }}">{{ $data->package_name }}</a>
+                                        </h4>
+                                        <div class="rating-main d-flex align-items-center">
+                                            <div class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                            <span class="ml-2">38 Reviews</span>
+                                        </div>
+                                    </div>
+                                    <div class="trend-last-main">
+                                        <p class="mb-0 trend-para">
+                                            {!! $data->short_desc !!}
+                                        </p>
+                                        <div class="trend-last d-flex align-items-center justify-content-between">
+                                            <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                {{ $data->duration }}</p>
+                                            <div class="trend-price">
+                                                <p class="price white mb-0">From <span>&#8377;
+                                                        {{ number_format($data->total_price, 2) }}</span></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
                     @endforeach
 
                 </div>
@@ -276,14 +354,14 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-4 col-md-6 p-1">
                         <div class="desti-title text-center">
-                            <h2 class="white">Travel <br>Best Holidays Trips <br>In The World</h2>
-                            <p class="white mb-0">Lorem Ipsum is simply dummy text the printing and typesetting
-                                industry.</p>
+                            <h2 class="white">Tour Category</h2>
+                            <p class="white mb-0">The Royal Heritage Tour: Experience the grandeur of Rajasthan's palaces
+                                and forts, immersing yourself in the opulent lifestyle of the royals.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="https://img.freepik.com/free-photo/beautiful-view-empire-states-skyscrapers-new-york-city_181624-6295.jpg?w=2000&t=st=1669533378~exp=1669533978~hmac=3e05cfa6316f4b4347f631f2d845c5b7510d340b1d06f552b435f78519e18863"
+                            <img src="{{asset('images/sheeshmahal.jpg')}}"
                                 alt="desti">
                             <div class="desti-content">
                                 <div class="rating mb-1">
@@ -295,17 +373,12 @@
                                 </div>
                                 <h4 class="white mb-0">New York Tour</h4>
                             </div>
-                            <div class="desti-overlay">
-                                <a href="#" class="nir-btn">
-                                    <span class="white">Book Now</span>
-                                    <i class="fa fa-arrow-right white pl-1"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="https://img.freepik.com/free-photo/armenian-monastery-landscape_181624-29387.jpg?w=2000&t=st=1669533451~exp=1669534051~hmac=37c39cca23be0e1409a10cf0da077c5f8cd7567532720398a0b7543d2381956f"
+                            <img src="{{asset('images/jantar.l.jpg')}}"
                                 alt="desti">
                             <div class="desti-content">
                                 <div class="rating mb-1">
@@ -317,12 +390,7 @@
                                 </div>
                                 <h4 class="white mb-0">Armania Tour</h4>
                             </div>
-                            <div class="desti-overlay">
-                                <a href="#" class="nir-btn">
-                                    <span class="white">Book Now</span>
-                                    <i class="fa fa-arrow-right white pl-1"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 p-1">
@@ -339,12 +407,7 @@
                                 </div>
                                 <h4 class="white mb-0">Manchester Tour</h4>
                             </div>
-                            <div class="desti-overlay">
-                                <a href="#" class="nir-btn">
-                                    <span class="white">Book Now</span>
-                                    <i class="fa fa-arrow-right white pl-1"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 p-1">
@@ -361,12 +424,7 @@
                                 </div>
                                 <h4 class="white mb-0">kathmandu Tour</h4>
                             </div>
-                            <div class="desti-overlay">
-                                <a href="#" class="nir-btn">
-                                    <span class="white">Book Now</span>
-                                    <i class="fa fa-arrow-right white pl-1"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 p-1">
@@ -383,12 +441,7 @@
                                 </div>
                                 <h4 class="white mb-0">Tokyo Tour</h4>
                             </div>
-                            <div class="desti-overlay">
-                                <a href="#" class="nir-btn">
-                                    <span class="white">Book Now</span>
-                                    <i class="fa fa-arrow-right white pl-1"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-12 p-1">
@@ -405,12 +458,7 @@
                                 </div>
                                 <h4 class="white mb-0">Norwich Tour</h4>
                             </div>
-                            <div class="desti-overlay">
-                                <a href="#" class="nir-btn">
-                                    <span class="white">Book Now</span>
-                                    <i class="fa fa-arrow-right white pl-1"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -421,7 +469,7 @@
     <!-- top destination ends -->
 
     <!-- Discount action starts -->
-    <section class="discount-action pt-0">
+    {{-- <section class="discount-action pt-0">
         <div class="container">
             <div class="call-banner">
                 <div class="row d-flex align-items-center">
@@ -437,11 +485,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Discount action Ends -->
 
     <!-- Counter -->
-    <section class="counter-main pt-0 pb-6">
+    {{-- <section class="counter-main pt-0 pb-6">
         <div class="container">
             <div class="counter text-center">
                 <div class="row">
@@ -480,13 +528,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End Counter -->
 
     <!-- Fav destination Starts -->
-    <section class="trending destination pb-6 pt-9"
+    {{-- <section class="trending destination pb-6 pt-9"
         style="background-image:
-             url('https://img.freepik.com/free-photo/hawa-mahal-palace-jaipur-india_53876-31311.jpg?w=2000&t=st=1669533920~exp=1669534520~hmac=fb9d53b229ee866fea8a24fc96075083958d778de65e4d1b65a2062203a223d2');">
+             url({{asset('images/hwamahel.png')}});">
         <div class="container">
             <div class="section-title section-title-w text-center mb-5 pb-2 w-50 mx-auto">
                 <h2 class="m-0 white">Find Your <strong>Favourite Destination</strong></h2>
@@ -625,7 +673,7 @@
                             <div class=" col-lg-4 col-md-6 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending14.jpg') }}" alt="image">
+                                        <img src="{{ asset('images/trending11.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -648,7 +696,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/reviewer/1.jpg') }}" class="d-author mr-2"
+                                                        src="{{ asset('images/blog4.jpg') }}" class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -662,7 +710,7 @@
                             <div class=" col-lg-4 col-md-6 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending13.jpg') }}" alt="image">
+                                        <img src="{{ asset('images/trending12.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -685,7 +733,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/reviewer/2.jpg') }}" class="d-author mr-2"
+                                                        src="{{ asset('images/about-1.jpg') }}" class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -699,7 +747,7 @@
                             <div class=" col-lg-4 col-md-12 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending7.jpg') }} " alt="image">
+                                        <img src="{{ asset('images/about-1.jpg') }} " alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -741,7 +789,7 @@
                             <div class=" col-lg-4 col-md-6 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending2.jpg') }}" alt="image">
+                                        <img src="{{ asset('images/trending12.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -778,7 +826,7 @@
                             <div class=" col-lg-4 col-md-6 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending3.jpg') }}" alt="image">
+                                        <img src="{{ asset('images/trending8.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -801,7 +849,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/reviewer/2.jpg') }}" class="d-author mr-2"
+                                                        src="{{ asset('images/1.jpg') }}" class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -815,7 +863,7 @@
                             <div class=" col-lg-4 col-md-12 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending4.jpg') }}" alt="image">
+                                        <img src="{{ asset('images/trending12.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -838,7 +886,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/1.jpg')}} " class="d-author mr-2"
+                                                        src="{{ asset('images/1.jpg') }} " class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -857,7 +905,7 @@
                             <div class=" col-lg-4 col-md-6 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending6.jpg')}}" alt="image">
+                                        <img src="{{ asset('images/trending12.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -880,7 +928,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/1.jpg')}}" class="d-author mr-2"
+                                                        src="{{ asset('images/1.jpg') }}" class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -894,7 +942,7 @@
                             <div class=" col-lg-4 col-md-6 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending5.jpg')}}" alt="image">
+                                        <img src="{{ asset('images/trending11.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -917,7 +965,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/2.jpg')}}" class="d-author mr-2"
+                                                        src="{{ asset('images/2.jpg') }}" class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -931,7 +979,7 @@
                             <div class=" col-lg-4 col-md-12 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="{{ asset('images/trending9.jpg')}}" alt="image">
+                                        <img src="{{ asset('images/trending11.jpg') }}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
@@ -954,7 +1002,7 @@
                                                 - perfect for exploring.</p>
                                             <div class="trend-last d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 white d-flex align-items-center"><img
-                                                        src="{{ asset('images/1.jpg')}}" class="d-author mr-2"
+                                                        src="{{ asset('images/jaipur.jpg') }}" class="d-author mr-2"
                                                         alt=""> Thu Astudillo</p>
                                                 <div class="trend-price">
                                                     <p class="price white mb-0"><a href="#"><i
@@ -971,80 +1019,15 @@
             </div>
         </div>
         <div class="dot-overlay"></div>
-    </section>
+    </section> --}}
     <!-- Fav destination Ends -->
 
-    <!-- top deal starts -->
-    <section class="top-deals bg-grey pt-9">
-        <div class="container">
-            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
-                <h2 class="m-0">Today's <span>Top Deal</span></h2>
-                <p class="mb-0">Travel has helped us to understand the meaning of life and it has helped us become
-                    better people. Each time we travel, we see the world with new eyes.</p>
-            </div>
-            <div class="row team-slider">
-                <div class="col-lg-4 slider-item">
-                    <div class="slider-image">
-                        <img src="{{ asset('images/deal1.jpg')}}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> United Kingdom</h6>
-                        <h4><a href="#">Earning Asiana Club Miles</a></h4>
-                        <p>With upto 30% Off, experience Europe your way!</p>
-                        <div class="deal-price">
-                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 slider-item">
-                    <div class="slider-image">
-                        <img src="{{ asset('images/deal2.jpg')}}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Thailand</h6>
-                        <h4><a href="#">Save big on hotels!</a></h4>
-                        <p>With upto 30% Off, experience Europe your way!</p>
-                        <div class="deal-price">
-                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 slider-item">
-                    <div class="slider-image">
-                        <img src="{{ asset('images/deal3.jpg')}}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> South Korea</h6>
-                        <h4><a href="#">Experience Europe Your Way</a></h4>
-                        <p>With upto 30% Off, experience Europe your way!</p>
-                        <div class="deal-price">
-                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 slider-item">
-                    <div class="slider-image">
-                        <img src="{{ asset('images/deal4.jpg')}}" alt="image">
-                    </div>
-                    <div class="slider-content">
-                        <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Germany</h6>
-                        <h4><a href="#">Earning Asiana Club Miles</a></h4>
-                        <p>With upto 30% Off, experience Europe your way!</p>
-                        <div class="deal-price">
-                            <p class="price font-weight-bold pink mb-0">From <span>$250.00</span></p>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- top deal ends -->
 
     <!-- testomonial start -->
     <section class="testimonial pb-10 pt-9"
         style="background-image:
-             url('https://img.freepik.com/free-photo/hawa-mahal-palace-jaipur-india_53876-31311.jpg?w=2000&t=st=1669533920~exp=1669534520~hmac=fb9d53b229ee866fea8a24fc96075083958d778de65e4d1b65a2062203a223d2');">
+             url('{{asset('images/hwamahel.png')}}');">
         <div class="container">
             <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
                 <h2 class="m-0 white">What <span>People Say About Us</span></h2>
@@ -1120,7 +1103,7 @@
                             </p>
                         </div>
                         <div class="author-title d-flex align-items-center">
-                            <a href="#"><img src="{{ asset('images/img3.jpg')}}" alt=""></a>
+                            <a href="#"><img src="{{ asset('images/img3.jpg') }}" alt=""></a>
                             <div class="author-in ml-3">
                                 <h5 class="m-0 white">Kelson Kelly</h5>
                                 <div class="rating">
@@ -1141,7 +1124,7 @@
     <!-- testimonial ends -->
 
     <!-- Instagram starts -->
-    <section class="insta-main p-0">
+    {{-- <section class="insta-main p-0">
         <div class="insta-inner">
             <div class="follow-button">
                 <h5 class="m-0"><a href="#" title="">Follow on Instagram</a></h5>
@@ -1149,56 +1132,56 @@
             <div class="row attract-slider">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-3.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-3.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-4.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-4.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-5.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-5.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-1.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-1.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-7.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-7.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-8.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-8.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-2.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-2.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-6.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-6.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="insta-image">
-                        <a href="#"><img src="{{ asset('images/ins-9.jpg')}}" alt="insta"></a>
+                        <a href="#"><img src="{{ asset('images/ins-9.jpg') }}" alt="insta"></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Instagram ends -->
 
     <!-- News Starts -->
-    <section class="news pb-2 pt-9">
+    {{-- <section class="news pb-2 pt-9">
         <div class="container">
             <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
                 <h2 class="m-0"><span>Articles & Travel</span> Guidings</h2>
@@ -1333,14 +1316,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- News Ends -->
-
 @endSection
 @section('script')
-<script>
-    function myFunction() {
-      document.getElementById("myForm").submit();
-    }
+    <script>
+        function myFunction() {
+            document.getElementById("myForm").submit();
+        }
     </script>
 @endsection
