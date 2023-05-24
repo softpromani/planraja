@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-
 @section('content')
     <!-- contact starts -->
     <section class="contact-main pt-0 contact1 bg-grey">
