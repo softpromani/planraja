@@ -32,6 +32,128 @@
         </div>
         <br>
         <br>
+        <div class="container" style="">
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="info-content pl-4">
+                               <p class="m-0">  <i class="fa fa-map-marker"></i> B-33, Sen Colony, Railway station</p>
+                               <p class="m-0"> Jaipur, Rajasthan 302006</p>
+                            </div>
+                            <p class="info-content pl-4 mt-2">
+                                <i class="fa fa-phone"></i> <a href="tel:+91-9929992212"> +91-9929992212 </a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="info-content pl-4">
+                               <p class="m-0">  <i class="fa fa-map-marker"></i> B-33, Sen Colony, Railway station</p>
+                               <p class="m-0"> Jaipur, Rajasthan 302006</p>
+                            </div>
+                            <p class="info-content pl-4 mt-2">
+                                <i class="fa fa-phone"></i> <a href="tel:+91-9929992212"> +91-9929992212 </a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="info-content pl-4">
+                               <p class="m-0">  <i class="fa fa-map-marker"></i> B-33, Sen Colony, Railway station</p>
+                               <p class="m-0"> Jaipur, Rajasthan 302006</p>
+                            </div>
+                            <p class="info-content pl-4 mt-2">
+                                <i class="fa fa-phone"></i> <a href="tel:+91-9929992212"> +91-9929992212 </a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="info-content pl-4 mt-2">
+                               <p class="m-0">  <i class="fa fa-map-marker"></i> B-33, Sen Colony, Railway station</p>
+                               <p class="m-0"> Jaipur, Rajasthan 302006</p>
+                            </div>
+                            <p class="info-content pl-4 mt-2">
+                                <i class="fa fa-phone"></i> <a href="tel:+91-9929992212"> +91-9929992212 </a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="info-content pl-4">
+                               <p class="m-0">  <i class="fa fa-map-marker"></i> B-33, Sen Colony, Railway station</p>
+                               <p class="m-0"> Jaipur, Rajasthan 302006</p>
+                            </div>
+                            <p class="info-content pl-4 mt-2">
+                                <i class="fa fa-phone"></i> <a href="tel:+91-9929992212"> +91-9929992212 </a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="info-content pl-4">
+                               <p class="m-0">  <i class="fa fa-map-marker"></i> B-33, Sen Colony, Railway station</p>
+                               <p class="m-0"> Jaipur, Rajasthan 302006</p>
+                            </div>
+                            <p class="info-content pl-4 mt-2">
+                                <i class="fa fa-phone"></i> <a href="tel:+91-9929992212"> +91-9929992212 </a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                            <p class="info-content pl-4">
+                                <i class="fa fa-envelope"></i> <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
         <div class="container">
             <div class="contact-info">
                 <div class="row">
@@ -64,7 +186,7 @@
                                     <i class="fa fa-envelope"></i>
                                 </div>
                                 <div class="info-content pl-4">
-                                    <p class="m-0">contact@planrajasthantrip.com</p>
+                                    <a href="mailto:contact@planrajasthantrip.com"> contact@planrajasthantrip.com</a>
                                     <p class="m-0">www.planrajasthantrip.com</p>
                                 </div>
                             </div>
@@ -78,7 +200,8 @@
 
                             <div id="contactform-error-msg"></div>
 
-                            <form method="post" action="#" name="contactform" id="contactform">
+                            <form method="post" action="{{ route('store.contact') }}" id="myForm">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" name="first_name" class="form-control" id="fname"
                                         placeholder="First Name">
@@ -99,7 +222,7 @@
                                     <textarea name="comments" placeholder="Enter a message"></textarea>
                                 </div>
                                 <div class="comment-btn text-right mt-1">
-                                    <input type="submit" class="nir-btn" id="submit" value="Send Message">
+                                    <button type="submit" class="nir-btn" onclick="submitForm()">Send Message</button>
                                 </div>
                             </form>
                         </div>

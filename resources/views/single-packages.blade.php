@@ -147,43 +147,45 @@
                     </div>
                     <div class="row p-2">
                         <div class="col-md-12">
-                            <form>
+                            
+                            <form method="post" action="{{route('store.enquiry')}}" id="myForm">
+                                @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Full name</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input type="email" name="name" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Enter Full Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputPassword1"
+                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1"
                                         placeholder="Enter your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="departerdate">Departure Date</label>
-                                    <input type="date" class="form-control" id="departerdate"
+                                    <input type="date" name="departuredate" class="form-control" id="departerdate"
                                         placeholder="Departure Date">
                                 </div>
                                 <div class="form-group">
                                     <label for="totalmember">Total Members</label>
-                                    <input type="number" class="form-control" id="totalmember"
+                                    <input type="number" name="totalmember" class="form-control" id="totalmember"
                                         placeholder="Total Members">
                                 </div>
                                 <div class="form-group">
                                     <label for="number">Contact Number</label>
-                                    <input type="number" class="form-control" id="number"
+                                    <input type="number" name="number" class="form-control" id="number"
                                         placeholder="Contact Number">
                                 </div>
                                 <div class="form-group">
                                     <label for="days">Number of Days</label>
-                                    <input type="number" class="form-control" id="days"
+                                    <input type="number" name="numberofdays" class="form-control" id="days"
                                         placeholder="Number of Days">
                                 </div>
                                 <div class="form-group">
                                     <label for="Description">Tour Description</label>
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary"  onclick="submitForm()">Submit</button>
                             </form>
                         </div>
                     </div>

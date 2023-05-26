@@ -90,6 +90,8 @@ Route::get('package-details/{id}', [HomeController::class, 'singlePackage'])->na
 Route::get('package',[packageDetailController::class,'package_details'])->name('packages');
 Route::get('/about-us', [CommonController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/contact-us', [CommonController::class, 'contactUs'])->name('contactUs');
+Route::post('/contact', [CommonController::class,'contact'])->name('store.contact');
+Route::post('/enquiry', [CommonController::class,'enquiry'])->name('store.enquiry');
 
 Route::get('/privacy-policy', [CommonController::class, 'privacyPolicy'])->name('privacyPolicy');
 Route::get('/terms', [CommonController::class, 'termsOfUse'])->name('termsOfUse');

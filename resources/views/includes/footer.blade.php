@@ -2,7 +2,8 @@
     <div class="cta-horizon bg-blue pt-4 pb-2">
         <div class="container d-md-flex align-items-center justify-content-between">
             <h4 class="mb-2 white">Didn't find the service suite you! Need a custom service?</h4>
-            <a href="#" data-toggle="modal" data-target="#exampleModalScrollable" class="nir-btn-black">plan you trip </a>
+            <a href="#" data-toggle="modal" data-target="#exampleModalScrollable" class="nir-btn-black">plan you trip
+            </a>
         </div>
     </div>
     <!-- cta-horizon Ends -->
@@ -22,8 +23,10 @@
                             </p> --}}
                             <ul>
                                 <li><strong>M. No:</strong> <a href="tel:+91-9929992212"> +91-9929992212 </a> </li>
-                                 <li><strong>Location:</strong> B-33, Railway Station ,Jaipur, 302006</li>
-                                <li><strong>Email:</strong> <a href="mailto:contact@planrajasthantrip.com">contact@planrajasthantrip.com </a></li>
+                                <li><strong>Location:</strong> B-33, Railway Station ,Jaipur, 302006</li>
+                                <li><strong>Email:</strong> <a
+                                        href="mailto:contact@planrajasthantrip.com">contact@planrajasthantrip.com </a>
+                                </li>
                                 <li><strong>Website:</strong> www.planrajasthantrip.com</li>
                             </ul>
                         </div>
@@ -32,11 +35,11 @@
                         <div class="footer-links">
                             <h4 class="white">Company</h4>
                             <ul>
-                                <li><a href="{{route('aboutUs')}}">About Us</a></li>
-                                <li><a href="{{route('contactUs')}}">Contact Us</a></li>
+                                <li><a href="{{ route('aboutUs') }}">About Us</a></li>
+                                <li><a href="{{ route('contactUs') }}">Contact Us</a></li>
                                 <!-- <li><a href="#">Delivery Information</a></li> -->
-                                <li><a href="{{route('privacyPolicy')}}">Privacy Policy</a></li>
-                                <li><a href="{{route('termsOfUse')}}">Terms &amp; Conditions</a></li>
+                                <li><a href="{{ route('privacyPolicy') }}">Privacy Policy</a></li>
+                                <li><a href="{{ route('termsOfUse') }}">Terms &amp; Conditions</a></li>
                                 <!-- <li><a href="#">Customer Service</a></li> -->
                                 <!-- <li><a href="#">Return Policy</a></li> -->
                             </ul>
@@ -348,43 +351,44 @@
                             <h3 class="pink mb-1 text-center">Get Custom Quote</h3>
                         </div>
                         <div class="login-form">
-                            <form action="" method="">
+                            <form method="post" action="{{route('store.enquiry')}}" id="myForm">
+                                @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Full name</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input type="email" name="name" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Enter Full Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputPassword1"
+                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1"
                                         placeholder="Enter your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="departerdate">Departure Date</label>
-                                    <input type="date" class="form-control" id="departerdate"
+                                    <input type="date" name="departuredate" class="form-control" id="departerdate"
                                         placeholder="Departure Date">
                                 </div>
                                 <div class="form-group">
                                     <label for="totalmember">Total Members</label>
-                                    <input type="number" class="form-control" id="totalmember"
+                                    <input type="number" name="totalmember" class="form-control" id="totalmember"
                                         placeholder="Total Members">
                                 </div>
                                 <div class="form-group">
                                     <label for="number">Contact Number</label>
-                                    <input type="number" class="form-control" id="number"
+                                    <input type="number" name="number" class="form-control" id="number"
                                         placeholder="Contact Number">
                                 </div>
                                 <div class="form-group">
                                     <label for="days">Number of Days</label>
-                                    <input type="number" class="form-control" id="days"
+                                    <input type="number" name="numberofdays" class="form-control" id="days"
                                         placeholder="Number of Days">
                                 </div>
                                 <div class="form-group">
                                     <label for="Description">Tour Description</label>
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary nir-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary"  onclick="submitForm()">Submit</button>
                             </form>
                             <div class="form-group mb-0 form-checkbox mt-3">
                                 <input type="checkbox"> By clicking this, you are agree to to<a href="#"
@@ -411,6 +415,8 @@
         </div>
     </div>
     <!-- *Scripts* -->
+    @include('sweetalert::alert')
+
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/particles.js') }}"></script>
@@ -456,6 +462,13 @@
             navLinks.style.left = "-100%";
         }
 
+        function submitForm() {
+            // Get the form element
+            var form = document.getElementById('myForm');
+
+            // Submit the form
+            form.submit();
+        }
 
         // sidebar submenu open close js code
         let htmlcssArrow = document.querySelector(".htmlcss-arrow");

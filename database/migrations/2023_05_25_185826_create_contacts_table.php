@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('tour_packages', function (Blueprint $table) {
-            $table->string('trip_type');
-            $table->bigInteger('tour_category_id');
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->id();
+            $table->string('f_name');
+            $table->string('l_name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('comment')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -26,8 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('tour_packages', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('contacts');
     }
 };
