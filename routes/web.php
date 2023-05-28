@@ -77,6 +77,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/save-tour-package', [PackageController::class, 'saveTourPackage'])->name('save-tour-package');
 
     Route::get('/get-cities', [PackageController::class, 'getCities'])->name('get-cities');
+    Route::get('/get-enquiry', [PackageController::class, 'enquiry'])->name('get-enquiry');
+    Route::get('/get-contact', [PackageController::class, 'contact'])->name('get-contact');
+    Route::get('/delete-contact/{id}', [PackageController::class, 'delete'])->name('delete-contact');
+    Route::get('/delete-enquiry/{id}', [PackageController::class, 'delete_enc'])->name('delete-enquiry');
 });
 
 Route::get('/logout', function (Request $request) {

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cities;
+use App\Models\Contact;
+use App\Models\Enquiry;
 use App\Models\Eternity;
 use App\Models\Hotels;
 use App\Models\TourPackages;
@@ -135,6 +137,35 @@ class PackageController extends Controller
             return back()->with('error', $ex->getMessage());
         }
     }
+    public function contact()
+    {
+        $data=Contact::get();
+       return view('admin.enquiry_contact.contactdata',compact('data'));
+    }
+    public function enquiry()
+    {
+        $data = Enquiry::get();
+        return view('admin.enquiry_contact.enquiry',compact('data'));
+
+    }
 
 
+    public function delete($id)
+    {
+        $del = Contact::find($id)->delete();
+        if($del){
+            return back()->with('toast_success','Contact Deleted Successfully!');
+        }else{
+            return back()->with('toast_error','Contact Not Deleted!');
+        }
+    }
+    public function delete_enc($id)
+    {
+        $del = Enquiry::find($id)->delete();
+        if($del){
+            return back()->with('toast_success','Enquiry Deleted Successfully!');
+        }else{
+            return back()->with('toast_error','Enquiry Not Deleted!');
+        }
+    }
 }

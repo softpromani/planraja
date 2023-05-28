@@ -26,7 +26,7 @@
   <script src="{{ asset('nice-admin/js/main.js') }} "></script>
   <script src="{{ asset('js/select2.min.js') }} "></script>
 
-
+  @yield('script')
   </body>
 
   </html>

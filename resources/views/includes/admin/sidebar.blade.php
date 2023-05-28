@@ -106,23 +106,23 @@
             </ul>
         </li>
 
-        {{-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#hotels-gallery" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Gallery Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-menu-button-wide"></i><span>Contact/Enquiry</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="hotels-gallery" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{ route('view-hotels') }}" class="active">
-                        <i class="bi bi-circle"></i><span>Hotel Images</span>
+                    <a href="{{ route('get-enquiry') }}" class="active">
+                        <i class="bi bi-circle"></i><span>Enquiry Data</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('add-hotels') }}">
-                        <i class="bi bi-circle"></i><span>Add Hotel Imags</span>
+                    <a href="{{ route('get-contact') }}">
+                        <i class="bi bi-circle"></i><span>Contact Data</span>
                     </a>
                 </li>
             </ul>
-        </li> --}}
+        </li>
 
 
         <li class="nav-item">
