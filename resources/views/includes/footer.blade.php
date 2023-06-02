@@ -18,9 +18,7 @@
                             <a href="/">
                                 <img src="{{ asset('images/icon.png') }}" alt="">
                             </a>
-                            {{-- <p class="mt-3">
-                               B-33, Railway Station ,Jaipur, 302006
-                            </p> --}}
+
                             <ul>
                                 <li><strong>M. No:</strong> <a href="tel:+91-9929992212"> +91-9929992212 </a> </li>
                                 <li><strong>Location:</strong> B-33, Railway Station ,Jaipur, 302006</li>
@@ -74,44 +72,6 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="footer-payment">
-            <div class="container">
-                <div class="footer-pay d-md-flex align-items-center justify-content-between pt-2 pb-2">
-                    <div class="footer-payment-nav">
-                        <ul class="d-md-flex align-items-center">
-                            <li class="mr-2">We Support:</li>
-                            <li class="mr-2"><i class="fab fa-cc-mastercard"></i></li>
-                            <li class="mr-2"><i class="fab fa-cc-paypal"></i></li>
-                            <li class="mr-2"><i class="fab fa-cc-stripe"></i></li>
-                            <li class="mr-2"><i class="fab fa-cc-visa"></i></li>
-                            <li class="mr-2"><i class="fab fa-cc-discover"></i></li>
-                        </ul>
-                    </div>
-                    <div class="footer-payment-nav mb-0">
-                        <ul>
-                            <li>
-                                <select>
-                                    <option>English (United States)</option>
-                                    <option>English (United States)</option>
-                                    <option>English (United States)</option>
-                                    <option>English (United States)</option>
-                                    <option>English (United States)</option>
-                                </select>
-                            </li>
-                            <li>
-                                <select>
-                                    <option>$ USD</option>
-                                    <option>$ USD</option>
-                                    <option>$ USD</option>
-                                    <option>$ USD</option>
-                                    <option>$ USD</option>
-                                </select>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
         <div class="footer-copyright pt-2 pb-2">
             <div class="container">
                 <div class="copyright-inner d-md-flex align-items-center justify-content-between">
@@ -147,111 +107,6 @@
     </div>
     <!-- Back to top ends -->
 
-    <!-- Register Modal -->
-    {{-- <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bordernone p-0">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="login-content p-4 text-center">
-                        <div class="login-title section-border">
-                            <h3 class="pink mb-1">Register</h3>
-                            <p>Access thousands of online classes in design, business, and more!</p>
-                        </div>
-                        <div class="login-form text-center">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Enter Full Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" placeholder="Enter password">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" placeholder="Confirm password">
-                                </div>
-                            </form>
-                            <div class="form-btn">
-                                <a href="#" class="nir-btn">Register</a>
-                            </div>
-                            <div class="form-group mb-0 form-checkbox mt-3">
-                                <input type="checkbox"> By clicking this, you are agree to to<a href="#"
-                                    class=""> our terms of use</a> and <a href="#" class="">privacy
-                                    policy</a> including the use of cookies
-                            </div>
-                        </div>
-                        <div class="login-social border-t mt-3 pt-2 mb-3">
-                            <p class="mb-2">OR continue with</p>
-                            <a href="#" class="btn-facebook"><i class="fab fa-facebook"
-                                    aria-hidden="true"></i> Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
-                                Twitter</a>
-                            <a href="#" class="btn-google"><i class="fab fa-google" aria-hidden="true"></i>
-                                Google</a>
-                        </div>
-                        <div class="sign-up">
-                            <p class="m-0">Already have an account? <a href="login.html" class="pink">Login</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- login Modal -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bordernone p-0">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="login-content p-4 text-center">
-                        <div class="login-title section-border">
-                            <h3 class="pink">Login</h3>
-                        </div>
-                        <div class="login-form">
-                            <form>
-                                <div class="form-group">
-                                    <input type="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" placeholder="Enter password">
-                                </div>
-                            </form>
-                            <div class="form-btn">
-                                <a href="#" class="nir-btn">LOGIN</a>
-                            </div>
-                            <div class="form-group mb-0 form-checkbox mt-3">
-                                <input type="checkbox"> Remember Me | <a href="#" class="">Forgot
-                                    password?</a>
-                            </div>
-                        </div>
-                        <div class="login-social border-t mt-3 pt-2 mb-3">
-                            <p class="mb-2">OR continue with</p>
-                            <a href="#" class="btn-facebook"><i class="fab fa-facebook"
-                                    aria-hidden="true"></i> Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
-                                Twitter</a>
-                        </div>
-                        <div class="sign-up">
-                            <p class="m-0">Do not have an account? <a href="login.html" class="pink">Sign
-                                    Up</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
     <!-- header side menu -->
     <div class="header_sidemenu">
@@ -351,22 +206,23 @@
                             <h3 class="pink mb-1 text-center">Get Custom Quote</h3>
                         </div>
                         <div class="login-form">
-                            <form method="post" action="{{route('store.enquiry')}}" id="myForm">
+                            <form method="post" action="{{ route('store.enquiry') }}" id="myFormenquiry">
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Full name</label>
-                                    <input type="email" name="name" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter Full Name">
+                                    <input type="email" name="name" class="form-control"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        placeholder="Enter Full Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Enter your Email">
+                                    <input type="email" name="email" class="form-control"
+                                        id="exampleInputPassword1" placeholder="Enter your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="departerdate">Departure Date</label>
-                                    <input type="date" name="departuredate" class="form-control" id="departerdate"
-                                        placeholder="Departure Date">
+                                    <input type="date" name="departuredate" class="form-control"
+                                        id="departerdate" placeholder="Departure Date">
                                 </div>
                                 <div class="form-group">
                                     <label for="totalmember">Total Members</label>
@@ -388,7 +244,7 @@
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
                                     <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary"  onclick="submitForm()">Submit</button>
+                                <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
                             </form>
                             <div class="form-group mb-0 form-checkbox mt-3">
                                 <input type="checkbox"> By clicking this, you are agree to to<a href="#"
@@ -440,17 +296,6 @@
         // search-box open close js code
         let navbar = document.querySelector(".navbar");
         let searchBox = document.querySelector(".search-box .bx-search");
-        // let searchBoxCancel = document.querySelector(".search-box .bx-x");
-
-        // searchBox.addEventListener("click", () => {
-        //     navbar.classList.toggle("showInput");
-        //     if (navbar.classList.contains("showInput")) {
-        //         searchBox.classList.replace("bx-search", "bx-x");
-        //     } else {
-        //         searchBox.classList.replace("bx-x", "bx-search");
-        //     }
-        // });
-
         // sidebar open close js code
         let navLinks = document.querySelector(".nav-links");
         let menuOpenBtn = document.querySelector(".navbar .bx-menu");
@@ -464,8 +309,13 @@
 
         function submitForm() {
             // Get the form element
-            var form = document.getElementById('myForm');
-
+            var form = document.getElementById('myFormenquiry');
+            // Submit the form
+            form.submit();
+        }
+        function submitcontact() {
+            // Get the form element
+            var form = document.getElementById('myFormcontact');
             // Submit the form
             form.submit();
         }
@@ -484,6 +334,3 @@
             navLinks.classList.toggle("show3");
         }
     </script>
-    </body>
-
-    </html>

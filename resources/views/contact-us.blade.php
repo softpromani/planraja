@@ -200,7 +200,7 @@
 
                             <div id="contactform-error-msg"></div>
 
-                            <form method="post" action="{{ route('store.contact') }}" id="myForm">
+                            <form method="post" action="{{ route('store.contact') }}" id="myFormcontact">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" name="first_name" class="form-control" id="fname"
@@ -222,7 +222,7 @@
                                     <textarea name="comments" placeholder="Enter a message"></textarea>
                                 </div>
                                 <div class="comment-btn text-right mt-1">
-                                    <button type="submit" class="nir-btn" onclick="submitForm()">Send Message</button>
+                                    <button type="submit" class="nir-btn" onclick="submitcontact()">Send Message</button>
                                 </div>
                             </form>
                         </div>

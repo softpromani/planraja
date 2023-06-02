@@ -7460,9 +7460,10 @@ footer .footer-middle .footer-nav ul li a {
     font-weight: 700;
 }
 
-footer .footer-copyright {
+
+/* footer .footer-copyright {
     background: #fbfbfb12;
-}
+} */
 
 footer .newsletter-main .section-title h2 {
     font-size: 24px;
@@ -7590,7 +7591,8 @@ footer.footermain {
     position: relative;
 }
 
-footer.footermain::before {
+
+/* footer.footermain::before {
     content: '';
     background: #1b1b1c url(../images/testimonial.png);
     background-size: cover;
@@ -7603,7 +7605,7 @@ footer.footermain::before {
     height: 100%;
     width: 23%;
     z-index: 1;
-}
+} */
 
 footer.footermain .footer-upper {
     position: relative;
