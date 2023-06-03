@@ -40,7 +40,7 @@
                             <form name="hotelForm" method="POST" enctype="multipart/form-data"
                                 action="{{ route('store_eternity') }}">
                                 @csrf
-                                @foreach ($tourpackage as $key => $data)
+                                @foreach($tourpackage as $key => $data)
                                     <div>
                                         <div class="mb-3">
                                             <label for="inputEmail" class="col-sm-2 col-form-label">Day</label>

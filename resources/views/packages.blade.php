@@ -35,15 +35,15 @@
                 <div class="slider-nav-autoplay swiffy-slider slider-item-show4 slider-nav-round slider-nav-dark slider-nav-sm slider-indicators-round slider-indicators-outside slider-indicators-dark slider-nav-visible"
                     data-slider-nav-autoplay-interval="2500">
                     <ul class="slider-container">
-                        @forelse ($dt->packages as $package)
+                        @forelse ($dt->packages->where('status',1) as $package)
                             <a href="{{ route('singlePackage', $package->id ?? '') }}">
                                 <li>
-                                    @foreach ($package->packageimage as $package_image)
-                                        <img src="{{ $package_image->image ?? '' }}" style="max-width: 100%;height: auto;">
-                                    @endforeach
+                                    <img src="{{ $package->packageimage->first()->image ?? '' }}"
+                                        style="height:300px !important" />
                                     <div class="mt-1">
                                         <p>{{ $package->duration ?? '' }}</p>
                                         <h5>{{ $package->package_name ?? '' }}</h5>
+                                        <p>{{Str::limit( $package->short_desc ?? '',40 )}}</p>
                                     </div>
                                 </li>
                             </a>

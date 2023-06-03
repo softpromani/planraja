@@ -39,7 +39,6 @@ class PackageController extends Controller
     }
     public function viewAllPackages(Request $request)
     {
-
         $packageArr = $this->packageService->getPackageData($request);
         return view('admin.hotels.package.show-packages', compact('packageArr'));
     }

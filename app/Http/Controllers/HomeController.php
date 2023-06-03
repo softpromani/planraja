@@ -20,8 +20,9 @@ class HomeController extends Controller
         if (isset($request->day) and $request->day!=null) {
             $datas->where('days', $request->day);
         }
-        $datas = $datas->where('status', '1')->latest()->paginate(3);
-        return view('welcome', compact('datas', 'filter', 'cities','days'));
+        $datas = $datas->where('status', '1')->latest()->paginate(6);
+        $package = TourPackages::where('status', '1')->inRandomOrder()->limit(6)->get();
+        return view('welcome', compact('datas', 'filter', 'cities','days','package'));
     }
 
     public function singlePackage($id)

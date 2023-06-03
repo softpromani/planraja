@@ -126,6 +126,8 @@
     </div>
     <!-- form main ends -->
     <!-- about-us starts -->
+    <br>
+    <br>
     <section class="about-us pb-0 mt-5 pt-6">
         <div class="container">
             <div class="about-image-box">
@@ -145,27 +147,59 @@
                             <div class="about-imagelist">
                                 <ul class="d-flex justify-content-between">
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/th.jpg') }}" alt="">
+                                        <a href="{{ route('packages') }}"> <img src="{{ asset('images/th.jpg') }}"
+                                                alt=""></a>
                                     </li>
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/th1.jpg') }}" alt="">
+                                        <a href="{{ route('packages') }}"> <img src="{{ asset('images/th1.jpg') }}"
+                                                alt=""></a>
                                     </li>
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/th.jpg') }}" alt="">
+                                        <a href="{{ route('packages') }}"> <img src="{{ asset('images/th.jpg') }}"
+                                                alt=""></a>
                                     </li>
                                     <li class="mr-2">
-                                        <img src="{{ asset('images/th1.jpg') }}" alt="">
+                                        <a href="{{ route('packages') }}"> <img src="{{ asset('images/th1.jpg') }}"
+                                                alt=""></a>
                                     </li>
                                     <li>
-                                        <img src="{{ asset('images/th.jpg') }}" alt="">
+                                        <a href="{{ route('packages') }}"><img src="{{ asset('images/th.jpg') }}"
+                                                alt=""></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mb-4">
-                        <div class="about-image">
-                            <img class="img-fluid" src="{{ asset('images/tour.jpg') }}" alt="">
+                        <div class="swiffy-slider slider-item-ratio slider-item-ratio-16x9 slider-nav-animation slider-nav-animation-fadein slider-item-last-visible"
+                            id="swiffy-animation">
+                            <a href="{{ route('packages') }}">
+                                <ul class="slider-container" id="container1">
+                                    <li id="slide1" class=""><img src="{{ asset('images/tour.jpg') }}"
+                                            alt="..." loading="lazy"></li>
+                                    <li id="slide2" class=""><img src="{{ asset('images/th1.jpg') }}"
+                                            alt="..." loading="lazy"></li>
+                                    <li id="slide3" class=""><img src="{{ asset('images/th.jpg') }}"
+                                            alt="..." loading="lazy"></li>
+                                    <li id="slide4" class=""><img src="{{ asset('images/tour.jpg') }}"
+                                            alt="..." loading="lazy"></li>
+                                    <li id="slide5" class=""><img src="{{ asset('images/th.jpg') }}"
+                                            alt="..." loading="lazy"></li>
+                                    <li id="slide6" class="slide-visible"><img src="{{ asset('images/th1.jpg') }}"
+                                            alt="..." loading="lazy"></li>
+                                </ul>
+                            </a>
+                            <div class="slider-nav" aria-label="Go to previous"></div>
+                            <div class="slider-nav slider-nav-next" aria-label="Go to next"></div>
+
+                            <div class="slider-indicators">
+                                <div aria-label="Go to slide" class=""></div>
+                                <div aria-label="Go to slide" class=""></div>
+                                <div aria-label="Go to slide" class=""></div>
+                                <div aria-label="Go to slide" class=""></div>
+                                <div aria-label="Go to slide" class=""></div>
+                                <div aria-label="Go to slide" class="active"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,91 +213,22 @@
             <div
                 class="swiffy-slider slider-item-show4 slider-nav-round slider-nav-dark slider-nav-autoplay slider-indicators-square slider-indicators-highlight slider-indicators-sm slider-nav-animation-turn">
                 <ul class="slider-container">
-                    <li class="">
-                        <div id="slide9">
-                            <div class="card my-3">
-                                <div class="trend-image">
-                                    <a href="#"> <img class="imgresponsive" src="{{ asset('images/rj4.jpg') }}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="#" class="text-secondary">What is Lorem
-                                            Ipsum?</a></h3>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slide-visible">
-                        <div id="slide9">
-                            <div class="card my-3">
-                                <div class="trend-image">
-                                    <a href="#"> <img class="imgresponsive" src="{{ asset('images/rj.jpg') }}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="#" class="text-secondary">What is Lorem
-                                            Ipsum?</a></h3>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slide-visible">
-                        <div id="slide9">
-                            <div class="card my-3">
-                                <div class="trend-image">
-                                    <a href="#"> <img class="imgresponsive" src="{{ asset('images/rj4.jpg') }}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="#" class="text-secondary">What is Lorem
-                                            Ipsum?</a></h3>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text</p>
 
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="slide-visible">
-                        <div id="slide9">
-                            <div class="card my-3">
+                    @foreach ($package as $dt)
+                        <li class="">
+                            <div id="slide9">
                                 <div class="trend-image">
-                                    <img class="imgresponsive" src="{{ asset('images/plan2.png') }}" alt="image"></a>
+                                    <a href="{{ route('packages') }}"> <img class="imgresponsive" src="{{ asset($dt->packageimage->first()->image??'') }}" alt="image"></a>
                                 </div>
                                 <div class="card-body">
-                                    <h3 class="card-title"><a href="#" class="text-secondary">What is Lorem
-                                            Ipsum?</a></h3>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text</p>
-
+                                    <h3 class="card-title"><a href="{{ route('packages') }}" class="text-secondary">{{$dt->package_name??''}}</a></h3>
+                                    <h5 class="card-title"><a href="{{ route('packages') }}" class="text-secondary">{{$dt->duration??''}}</a></h5>
+                                    <p class="card-text">{{Str::limit($dt->short_desc??'')}}</p>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="slide-visible">
-                        <div id="slide9">
-                            <div class="card my-3">
-                                <div class="trend-image">
-                                    <a href="#"> <img class="imgresponsive" src="{{ asset('images/rj4.jpg') }}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="#" class="text-secondary">What is Lorem
-                                            Ipsum?</a></h3>
-                                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                        industry. Lorem Ipsum has been the industry's standard dummy text</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    @endforeach
                 </ul>
-
-
                 <ul class="slider-indicators">
                     <li class=""></li>
                     <li></li>
@@ -287,6 +252,7 @@
                 <p class="mb-0">Travel has helped us to understand the meaning of life and it has helped us become
                     better people. Each time we travel, we see the world with new eyes.</p>
             </div>
+
             <div class="trend-box">
                 <div class="row">
                     @foreach ($datas as $data)
@@ -294,26 +260,17 @@
                             <div class="col-lg-3 col-md-6 col-xs-12 mb-4">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                        <img src="https://img.freepik.com/free-photo/udaipur-city-view-from-hotel-balcony-rajasthan-india_53876-65505.jpg?w=2000&t=st=1669533247~exp=1669533847~hmac=969873ad3d77d8952f2eb85f3b0a1eb178609de906829dee7c1adf16e8c76db8"
-                                            alt="image">
+                                        <img src="{{ asset($data->packageimage[0]->image ?? '') }}" alt="image"
+                                            style="height:250px">
                                     </div>
                                     <div class="trend-content-main">
                                         <div class="trend-content">
                                             <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i>
+                                                {{ $data->cityname->city_name ?? '' }}
                                             </h6>
                                             <h4><a
                                                     href="{{ route('singlePackage', $data->id) }}">{{ $data->package_name }}</a>
                                             </h4>
-                                            {{-- <div class="rating-main d-flex align-items-center">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                            <span class="ml-2">38 Reviews</span>
-                                        </div> --}}
                                         </div>
                                         <div class="trend-last-main">
                                             <p class="mb-0 trend-para">
@@ -359,7 +316,8 @@
                     </div>
                     <div class="col-lg-4 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="{{ asset('images/sheeshmahal.jpg') }}" alt="desti">
+                            <a href="{{ route('packages') }}"><img src="{{ asset('images/sheeshmahal.jpg') }}"
+                                    alt="desti"></a>
                             <div class="desti-content">
                                 <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
@@ -368,14 +326,15 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <h4 class="white mb-0">New York Tour</h4>
+                                <h4 class="white mb-0">Desert Tour</h4>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="{{ asset('images/jantar.l.jpg') }}" alt="desti">
+                            <a href="{{ route('packages') }}"><img src="{{ asset('images/jantar.l.jpg') }}"
+                                    alt="desti"></a>
                             <div class="desti-content">
                                 <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
@@ -384,15 +343,16 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <h4 class="white mb-0">Armania Tour</h4>
+                                <h4 class="white mb-0">Tiger Tour</h4>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="https://img.freepik.com/free-photo/tower-bridge-london-uk_268835-1403.jpg?w=2000&t=st=1669533470~exp=1669534070~hmac=8dcff2ebe07cf2dcfef53be667f6568eff9cd2b6b3b2db5e258b3c17a4eea1b2"
-                                alt="desti">
+                            <a href="{{ route('packages') }}"> <img
+                                    src="https://img.freepik.com/free-photo/tower-bridge-london-uk_268835-1403.jpg?w=2000&t=st=1669533470~exp=1669534070~hmac=8dcff2ebe07cf2dcfef53be667f6568eff9cd2b6b3b2db5e258b3c17a4eea1b2"
+                                    alt="desti"></a>
                             <div class="desti-content">
                                 <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
@@ -401,15 +361,16 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <h4 class="white mb-0">Manchester Tour</h4>
+                                <h4 class="white mb-0">Royal Heritage Tour</h4>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="https://img.freepik.com/free-photo/sunrise-dal-lake-kashmir-india_1232-4765.jpg?w=1800&t=st=1669533491~exp=1669534091~hmac=dafef4234f343d240132196b619144e4b00979336b938474c6bbef2fcc82aa00"
-                                alt="desti">
+                            <a href="{{ route('packages') }}"> <img
+                                    src="https://img.freepik.com/free-photo/sunrise-dal-lake-kashmir-india_1232-4765.jpg?w=1800&t=st=1669533491~exp=1669534091~hmac=dafef4234f343d240132196b619144e4b00979336b938474c6bbef2fcc82aa00"
+                                    alt="desti"></a>
                             <div class="desti-content">
                                 <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
@@ -418,15 +379,16 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <h4 class="white mb-0">kathmandu Tour</h4>
+                                <h4 class="white mb-0">Pink City Tour</h4>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 p-1">
                         <div class="desti-image">
-                            <img src="https://img.freepik.com/free-photo/confluence-indus-zanskar-rivers-leh-ladakh-india_1150-11112.jpg?w=2000&t=st=1669533506~exp=1669534106~hmac=da2a6e2dd9a11fa299c72b3d2db3650c58828b39440cd277afeb9ebd4a576728"
-                                alt="desti">
+                            <a href="{{ route('packages') }}"> <img
+                                    src="https://img.freepik.com/free-photo/confluence-indus-zanskar-rivers-leh-ladakh-india_1150-11112.jpg?w=2000&t=st=1669533506~exp=1669534106~hmac=da2a6e2dd9a11fa299c72b3d2db3650c58828b39440cd277afeb9ebd4a576728"
+                                    alt="desti"></a>
                             <div class="desti-content">
                                 <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
@@ -435,15 +397,16 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <h4 class="white mb-0">Tokyo Tour</h4>
+                                <h4 class="white mb-0">Lake Tour</h4>
                             </div>
 
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-12 p-1">
                         <div class="desti-image">
-                            <img src="https://img.freepik.com/premium-photo/gate-india-famous-monument-new-delhi_400112-203.jpg?w=2000"
-                                alt="desti">
+                            <a href="{{ route('packages') }}"><img
+                                    src="https://img.freepik.com/premium-photo/gate-india-famous-monument-new-delhi_400112-203.jpg?w=2000"
+                                    alt="desti"></a>
                             <div class="desti-content">
                                 <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
@@ -452,7 +415,7 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <h4 class="white mb-0">Norwich Tour</h4>
+                                <h4 class="white mb-0">Social Media Tour</h4>
                             </div>
 
                         </div>
