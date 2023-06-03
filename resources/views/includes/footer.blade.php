@@ -204,7 +204,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Full name</label>
-                                    <input type="email" name="name" class="form-control"
+                                    <input type="text" name="name" class="form-control"
                                         id="exampleInputEmail1" aria-describedby="emailHelp"
                                         placeholder="Enter Full Name">
                                 </div>
