@@ -210,6 +210,10 @@
     <!-- about-us ends -->
     <section class="top-deals bg-grey pt-9">
         <div class="container">
+            <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                <h2 class="m-0">Trending <span>Tour Packages</span></h2>
+                <p class="mb-0"> Travel provides us with the opportunity to challenge our preconceived notions and broaden our minds. As we venture into unfamiliar territories, we confront new challenges and adapt to different situations. </p>
+            </div>
             <div
                 class="swiffy-slider slider-item-show4 slider-nav-round slider-nav-dark slider-nav-autoplay slider-indicators-square slider-indicators-highlight slider-indicators-sm slider-nav-animation-turn">
                 <ul class="slider-container">
