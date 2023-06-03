@@ -61,11 +61,22 @@
                             <h4 class="white">Newsletter</h4>
                             <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll
                                 send you a notification by email.</p>
-                            <div class="newsletter-form">
-                                <form>
-                                    <input type="email" placeholder="Enter your email">
-                                    <input type="submit" class="nir-btn mt-2 w-100" value="Subscribe">
-                                </form>
+                            <div class="social-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/Exclusiveindiajourney" target="_blank">
+                                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCi1kWWszOGKTNgPTTtw4zWg"
+                                            target="_blank">
+                                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -77,23 +88,6 @@
                 <div class="copyright-inner d-md-flex align-items-center justify-content-between">
                     <div class="copyright-text">
                         <p class="m-0 white"><?php echo date('Y'); ?> Plan Rajasthan Trip. All rights reserved.</p>
-                    </div>
-                    <div class="social-links">
-                        <ul>
-                            <li>
-                                <a href="https://www.facebook.com/Exclusiveindiajourney" target="_blank">
-                                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCi1kWWszOGKTNgPTTtw4zWg" target="_blank">
-                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <!--
-    <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li> -->
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -313,6 +307,7 @@
             // Submit the form
             form.submit();
         }
+
         function submitcontact() {
             // Get the form element
             var form = document.getElementById('myFormcontact');
