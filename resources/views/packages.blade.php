@@ -38,7 +38,7 @@
                         @forelse ($dt->packages->where('status',1) as $package)
                             <a href="{{ route('singlePackage', $package->id ?? '') }}">
                                 <li>
-                                    <img src="{{ $package->packageimage->first()->image ?? '' }}"
+                                    <img src="{{ asset($package->packageimage->first()->image ?? '') }}"
                                         style="height:300px !important" />
                                     <div class="mt-1">
                                         <p>{{ $package->duration ?? '' }}</p>

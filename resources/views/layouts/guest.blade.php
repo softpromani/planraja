@@ -100,7 +100,7 @@
 
         nav .navbar .links li .sub-menu {
             position: absolute;
-            top: 25px;
+            top: 20px;
             left: 0;
             line-height: 10px;
             background: #162241;
