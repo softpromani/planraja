@@ -76,14 +76,14 @@
         <div class="container-fluid d-flex justify-content-center border">
             <div class="form-content border-3">
                 <form action="{{ url('/') }}" id="myForm">
-                    <h3 class="form-title text-center d-inline white">Find a Places</h3>
+                    <h3 class="form-title text-center d-inline white">Find Packages</h3>
                     <div class="d-lg-flex align-items-center justify-content-between">
                         <div class="form-group pr-4 m-0">
                             <div class="input-box">
                                 <i class="fa fa-map-marker"></i>
                                 <select class="niceSelect" name="destination">
                                     @foreach ($cities as $c)
-                                        <option value="{{ $c->id }}">{{ $c->city_name }} {{ $c->id }}</option>
+                                        <option value="{{ $c->id }}">{{ $c->city_name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group pr-4 m-0">
+                        {{-- <div class="form-group pr-4 m-0">
                             <div class="input-box">
                                 <i class="fa fa-clock"></i>
                                 <select class="niceSelect" name="day">
@@ -112,12 +112,11 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group m-0 w-100">
                             <button type="submit" class="nir-btn bg-pink" onclick="myFunction()"><i
-                                    class="fa fa-search"></i> Check
-                                Availability</button>
+                                    class="fa fa-search"></i> Find Tour</button>
                         </div>
                     </div>
                 </form>
@@ -323,13 +322,13 @@
                             <a href="{{ route('packages') }}"><img src="{{ asset('images/sheeshmahal.jpg') }}"
                                     alt="desti"></a>
                             <div class="desti-content">
-                                <div class="rating mb-1">
+                                {{-- <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
-                                </div>
+                                </div> --}}
                                 <h4 class="white mb-0">Desert Tour</h4>
                             </div>
 
@@ -340,13 +339,13 @@
                             <a href="{{ route('packages') }}"><img src="{{ asset('images/jantar.l.jpg') }}"
                                     alt="desti"></a>
                             <div class="desti-content">
-                                <div class="rating mb-1">
+                                {{-- <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
-                                </div>
+                                </div> --}}
                                 <h4 class="white mb-0">Tiger Tour</h4>
                             </div>
 
@@ -358,13 +357,13 @@
                                     src="https://img.freepik.com/free-photo/tower-bridge-london-uk_268835-1403.jpg?w=2000&t=st=1669533470~exp=1669534070~hmac=8dcff2ebe07cf2dcfef53be667f6568eff9cd2b6b3b2db5e258b3c17a4eea1b2"
                                     alt="desti"></a>
                             <div class="desti-content">
-                                <div class="rating mb-1">
+                                {{-- <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
-                                </div>
+                                </div> --}}
                                 <h4 class="white mb-0">Royal Heritage Tour</h4>
                             </div>
 
@@ -376,13 +375,13 @@
                                     src="https://img.freepik.com/free-photo/sunrise-dal-lake-kashmir-india_1232-4765.jpg?w=1800&t=st=1669533491~exp=1669534091~hmac=dafef4234f343d240132196b619144e4b00979336b938474c6bbef2fcc82aa00"
                                     alt="desti"></a>
                             <div class="desti-content">
-                                <div class="rating mb-1">
+                                {{-- <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
-                                </div>
+                                </div> --}}
                                 <h4 class="white mb-0">Pink City Tour</h4>
                             </div>
 
@@ -394,13 +393,13 @@
                                     src="https://img.freepik.com/free-photo/confluence-indus-zanskar-rivers-leh-ladakh-india_1150-11112.jpg?w=2000&t=st=1669533506~exp=1669534106~hmac=da2a6e2dd9a11fa299c72b3d2db3650c58828b39440cd277afeb9ebd4a576728"
                                     alt="desti"></a>
                             <div class="desti-content">
-                                <div class="rating mb-1">
+                                {{-- <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
-                                </div>
+                                </div> --}}
                                 <h4 class="white mb-0">Lake Tour</h4>
                             </div>
 
@@ -412,13 +411,13 @@
                                     src="https://img.freepik.com/premium-photo/gate-india-famous-monument-new-delhi_400112-203.jpg?w=2000"
                                     alt="desti"></a>
                             <div class="desti-content">
-                                <div class="rating mb-1">
+                                {{-- <div class="rating mb-1">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
-                                </div>
+                                </div> --}}
                                 <h4 class="white mb-0">Social Media Tour</h4>
                             </div>
 

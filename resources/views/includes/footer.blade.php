@@ -2,7 +2,7 @@
     <div class="cta-horizon bg-blue pt-4 pb-2">
         <div class="container d-md-flex align-items-center justify-content-between">
             <h4 class="mb-2 white">Didn't find the service suite you! Need a custom service?</h4>
-            <a href="#" data-toggle="modal" data-target="#exampleModalScrollable" class="nir-btn-black">plan you trip
+            <a href="#"  data-toggle="modal" data-target=".bd-example-modal-xl" class="nir-btn-black">plan you trip
             </a>
         </div>
     </div>
@@ -185,9 +185,16 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            ...
+          </div>
+        </div>
+      </div>
+    {{-- <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header bordernone p-0">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -263,7 +270,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- *Scripts* -->
     @include('sweetalert::alert')
 

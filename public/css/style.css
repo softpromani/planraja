@@ -4091,10 +4091,10 @@ span.location-box {
     transition: all ease-in-out 0.5s;
 }
 
-.top-destination .desti-image:hover .desti-content {
+/* .top-destination .desti-image:hover .desti-content {
     opacity: 0;
     transition: all ease-in-out 0.5s;
-}
+} */
 
 @media (max-width: 767px) {
     .top-destination .col-lg-4,
