@@ -2,7 +2,7 @@
     <div class="cta-horizon bg-blue pt-4 pb-2">
         <div class="container d-md-flex align-items-center justify-content-between">
             <h4 class="mb-2 white">Didn't find the service suite you! Need a custom service?</h4>
-            <a href="#"  data-toggle="modal" data-target=".bd-example-modal-xl" class="nir-btn-black">plan you trip
+            <a href="#" id="myBtnopen" class="nir-btn-black">plan you trip
             </a>
         </div>
     </div>
@@ -184,15 +184,8 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            ...
-          </div>
-        </div>
-      </div>
-    {{-- <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+    {{-- <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
@@ -202,75 +195,136 @@
                     </button>
                 </div>
                 <div class="modal-body p-0">
-                    <div class="login-content p-4">
-                        <div class="login-title section-border">
-                            <h3 class="pink mb-1 text-center">Get Custom Quote</h3>
-                        </div>
-                        <div class="login-form">
-                            <form method="post" action="{{ route('store.enquiry') }}" id="myFormenquiry">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Full name</label>
-                                    <input type="text" name="name" class="form-control"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp"
-                                        placeholder="Enter Full Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Email</label>
-                                    <input type="email" name="email" class="form-control"
-                                        id="exampleInputPassword1" placeholder="Enter your Email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="departerdate">Departure Date</label>
-                                    <input type="date" name="departuredate" class="form-control"
-                                        id="departerdate" placeholder="Departure Date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="totalmember">Total Members</label>
-                                    <input type="number" name="totalmember" class="form-control" id="totalmember"
-                                        placeholder="Total Members">
-                                </div>
-                                <div class="form-group">
-                                    <label for="number">Contact Number</label>
-                                    <input type="number" name="number" class="form-control" id="number"
-                                        placeholder="Contact Number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="days">Number of Days</label>
-                                    <input type="number" name="numberofdays" class="form-control" id="days"
-                                        placeholder="Number of Days">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Description">Tour Description</label>
-                                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
-                            </form>
-                            <div class="form-group mb-0 form-checkbox mt-3">
-                                <input type="checkbox"> By clicking this, you are agree to to<a href="#"
-                                    class=""> our terms of use</a> and <a href="#" class="">privacy
-                                    policy</a> including the use of cookies
+
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p class="float-end"><span class="close">&times;</span></p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="text-center">HOW IT WORKS</h3>
+                        <div class="login-content">
+                            <div>
+                                <ul class="nav justify-content-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit. Temporibus, optio.</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Inventore maiores accusantium debitis, quidem aut
+                                            accusamus voluptates et! Mollitia maiores porro, labore sunt deleniti
+                                            recusandae necessitatibus possimus nesciunt numquam velit officia.</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="login-social border-t mt-3 pt-2 mb-3">
+                                <p class="mb-2">OR continue with</p>
+                                <a href="#" class="btn-facebook"><i class="fab fa-facebook"
+                                        aria-hidden="true"></i> Facebook</a>
+                                <a href="#" class="btn-twitter"><i class="fab fa-twitter"
+                                        aria-hidden="true"></i>
+                                    Twitter</a>
+                                <a href="#" class="btn-google"><i class="fab fa-google"
+                                        aria-hidden="true"></i>
+                                    Google</a>
+                            </div>
+                            <div class="sign-up">
+                                <p class="m-0">Already have an account? <a href="login.html"
+                                        class="pink">Login</a>
+                                </p>
                             </div>
                         </div>
-                        <div class="login-social border-t mt-3 pt-2 mb-3">
-                            <p class="mb-2">OR continue with</p>
-                            <a href="#" class="btn-facebook"><i class="fab fa-facebook"
-                                    aria-hidden="true"></i> Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
-                                Twitter</a>
-                            <a href="#" class="btn-google"><i class="fab fa-google" aria-hidden="true"></i>
-                                Google</a>
-                        </div>
-                        <div class="sign-up">
-                            <p class="m-0">Already have an account? <a href="login.html" class="pink">Login</a>
-                            </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-center">Request a <span class="blue">QUOTE</span></h3>
+                        <div class="login-content">
+                            <div class="login-form">
+                                <form method="post" action="{{ route('store.enquiry') }}" id="myFormenquiry">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail">Full name</label>
+                                                <input type="text" name="name" class="form-control"
+                                                    id="exampleInputEmail" aria-describedby="emailHelp"
+                                                    placeholder="Enter Full Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Email</label>
+                                                <input type="email" name="email" class="form-control"
+                                                    id="exampleInputPassword1" required placeholder="Enter your Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="departerdate">Departure Date</label>
+                                                <input type="date" name="departuredate" class="form-control"
+                                                    id="departerdate" placeholder="Departure Date">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="totalmember">Total Members</label>
+                                                <input type="number" min="1" name="totalmember" required class="form-control"
+                                                    id="totalmember" placeholder="Total Members">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Description">Tour Description</label>
+                                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="number">Contact Number</label>
+                                                <input type="number" min="10" max="12" name="number" class="form-control"
+                                                    id="number" placeholder="Contact Number">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <label for="days">Number of Days</label>
+                                                <input type="number" name="numberofdays" class="form-control"
+                                                    id="days" placeholder="Number of Days">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-1 form-checkbox mt-1">
+                                        <input type="checkbox"> By clicking this, you are agree to to<a href="#"
+                                            class=""> our terms of use</a> and <a href="#"
+                                            class="">privacy
+                                            policy</a> including the use of cookies
+                                    </div>
+                                    <button type="submit"
+                                    onclick="submitForm()" class="btn bg-pink white w-100">Submit</button>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- *Scripts* -->
     @include('sweetalert::alert')
 
@@ -284,6 +338,32 @@
     <script src="{{ asset('js/custom-nav.js') }}"></script>
     <script src="{{ asset('js/custom-date.js') }}"></script>
     <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtnopen");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
         $(document).ready(function() {
             $(document).on('click', '.toggle', function() {
                 var vindex = $(this).attr('data-toggel');
