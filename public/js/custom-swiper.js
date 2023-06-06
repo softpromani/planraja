@@ -1,7 +1,7 @@
-var interleaveOffset = 0.5;
+var interleaveOffset = 1;
 var swiperOptions = {
     loop: true,
-    speed: 3000,
+    speed: 300,
     grabCursor: true,
     SlidesPerView: 3,
     watchSlidesProgress: true,
@@ -16,11 +16,9 @@ var swiperOptions = {
         clickable: true,
     },
     autoplay: {
-        delay: 1000,
+        delay: 3000,
     },
-    fadeEffect: {
-        crossFade: true
-    },
+
 };
 
 var swiper = new Swiper(".swiper-container", swiperOptions);

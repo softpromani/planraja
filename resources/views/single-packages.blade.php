@@ -147,12 +147,12 @@
                     </div>
                     <div class="row p-2">
                         <div class="col-md-12">
-                            
+
                             <form method="post" action="{{route('store.enquiry')}}" id="myForm">
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Full name</label>
-                                    <input type="email" name="name" class="form-control" id="exampleInputEmail1"
+                                    <input type="name" name="name" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Enter Full Name">
                                 </div>
                                 <div class="form-group">

@@ -55,6 +55,8 @@ class CommonController extends Controller
 
     public function enquiry(Request $request)
     {
+        dd($request->all());
+
         $request->validate([
             'name' => 'required',
             'departuredate' => 'required',
@@ -64,7 +66,6 @@ class CommonController extends Controller
             'numberofdays' => 'required',
             'description' => 'required',
         ]);
-        // dd($request->all());
 
         try {
             $data = Enquiry::create([
