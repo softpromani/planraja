@@ -2,7 +2,7 @@
     <div class="cta-horizon bg-blue pt-4 pb-2">
         <div class="container d-md-flex align-items-center justify-content-between">
             <h4 class="mb-2 white">Didn't find the service suite you! Need a custom service?</h4>
-            <a href="#" id="myBtnopen" class="nir-btn-black">plan you trip
+            <a href="#"  class="myBtnopen nir-btn-black">plan you trip
             </a>
         </div>
     </div>
@@ -341,13 +341,17 @@
         var modal = document.getElementById("myModal");
 
         // Get the button that opens the modal
-        var btn = document.getElementById("myBtnopen");
+        var btn = document.getElementsByClassName("myBtnopen")[0];
+        var btn1 = document.getElementsByClassName("myBtnopen1")[0];
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal
         btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        btn1.onclick = function() {
             modal.style.display = "block";
         }
 
