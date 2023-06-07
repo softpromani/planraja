@@ -401,10 +401,12 @@
             form.submit();
         }
 
-        $('#submit').click(function() {
+        $('#sbmt').click(function() {
             if ($("form")[0].checkValidity()) {
                 //your form execution code
-            } else alert("Please fill all the field");
+            } else{
+                alert("Please fill all the field");
+            }
         });
 
         function submitcontact() {

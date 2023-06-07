@@ -185,7 +185,7 @@
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
                                     <textarea class="form-control" name="description"  rows="3" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary" id="submit"  onclick="submitForm()">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="sbmt"  onclick="submitForm()">Submit</button>
                             </form>
                         </div>
                     </div>
