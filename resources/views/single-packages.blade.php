@@ -148,44 +148,44 @@
                     <div class="row p-2">
                         <div class="col-md-12">
 
-                            <form method="post" action="{{route('store.enquiry')}}" id="myForm">
+                            <form method="post" action="{{route('store.enquiry')}}" id="myFormenquiry">
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Full name</label>
-                                    <input type="name" name="name" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter Full Name">
+                                    <input type="name" name="name" class="form-control"
+                                        aria-describedby="emailHelp" placeholder="Enter Full Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Enter your Email">
+                                    <input type="email" name="email" class="form-control"
+                                        placeholder="Enter your Email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="departerdate">Departure Date</label>
-                                    <input type="date" name="departuredate" class="form-control" id="departerdate"
-                                        placeholder="Departure Date">
+                                    <input type="date" name="departuredate" class="form-control"
+                                        placeholder="Departure Date" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="totalmember">Total Members</label>
-                                    <input type="number" name="totalmember" class="form-control" id="totalmember"
-                                        placeholder="Total Members">
+                                    <input type="number" name="totalmember" class="form-control"
+                                        placeholder="Total Members" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="number">Contact Number</label>
-                                    <input type="number" name="number" class="form-control" id="number"
-                                        placeholder="Contact Number">
+                                    <input type="number" name="number" class="form-control"
+                                        placeholder="Contact Number" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="days">Number of Days</label>
-                                    <input type="number" name="numberofdays" class="form-control" id="days"
-                                        placeholder="Number of Days">
+                                    <input type="number" name="numberofdays" class="form-control"
+                                        placeholder="Number of Days" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="Description">Tour Description</label>
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" name="description"  rows="3" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary"  onclick="submitForm()">Submit</button>
+                                <button type="submit" class="btn btn-primary" id="submit"  onclick="submitForm()">Submit</button>
                             </form>
                         </div>
                     </div>

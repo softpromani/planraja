@@ -2,7 +2,7 @@
     <div class="cta-horizon bg-blue pt-4 pb-2">
         <div class="container d-md-flex align-items-center justify-content-between">
             <h4 class="mb-2 white">Didn't find the service suite you! Need a custom service?</h4>
-            <a href="#"  class="myBtnopen nir-btn-black">plan you trip
+            <a href="#" class="myBtnopen nir-btn-black">plan you trip
             </a>
         </div>
     </div>
@@ -267,7 +267,8 @@
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Email</label>
                                                 <input type="email" name="email" class="form-control"
-                                                    id="exampleInputPassword1" required placeholder="Enter your Email">
+                                                    id="exampleInputPassword1" required
+                                                    placeholder="Enter your Email">
                                             </div>
                                         </div>
                                     </div>
@@ -282,8 +283,9 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="totalmember">Total Members</label>
-                                                <input type="number" min="1" name="totalmember" required class="form-control"
-                                                    id="totalmember" placeholder="Total Members">
+                                                <input type="number" min="1" name="totalmember" required
+                                                    class="form-control" id="totalmember"
+                                                    placeholder="Total Members">
                                             </div>
                                         </div>
                                     </div>
@@ -296,8 +298,8 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <label for="number">Contact Number</label>
-                                                <input type="number" min="10" max="12" name="number" class="form-control"
-                                                    id="number" placeholder="Contact Number">
+                                                <input type="number" min="10" max="12" name="number"
+                                                    class="form-control" id="number" placeholder="Contact Number">
                                             </div>
                                         </div>
                                         <div class="col">
@@ -314,8 +316,8 @@
                                             class="">privacy
                                             policy</a> including the use of cookies
                                     </div>
-                                    <button type="submit"
-                                    onclick="submitForm()" class="btn bg-pink white w-100">Submit</button>
+                                    <button type="submit" onclick="submitForm()"
+                                        class="btn bg-pink white w-100">Submit</button>
                                 </form>
 
                             </div>
@@ -398,6 +400,12 @@
             // Submit the form
             form.submit();
         }
+
+        $('#submit').click(function() {
+            if ($("form")[0].checkValidity()) {
+                //your form execution code
+            } else alert("Please fill all the field");
+        });
 
         function submitcontact() {
             // Get the form element
